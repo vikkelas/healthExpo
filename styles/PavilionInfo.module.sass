@@ -1,0 +1,130 @@
+@import "mixin"
+
+.pavilionInfo
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  &Header
+    display: flex
+    justify-content: flex-end
+    position: relative
+    padding: calcWidth1920(60) 0
+    width: 100%
+    &Info
+      z-index: 2
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%)
+      padding: calcWidth1920(40) 0
+      width: 45%
+      color: white
+      background-color: #5B8B27
+      &Title
+        font-family: Noto,sans-serif
+        font-weight: 700
+        font-size: calcWidth1920(35)
+        width: 100%
+        display: flex
+        gap: calcWidth1920(20)
+        flex-direction: column
+        h2
+          text-align: center
+        span
+          display: block
+          width: 90%
+          height: calcWidth1920(2)
+          background-color: white
+      &Content
+        padding: 0 calcWidth1920(40)
+        display: flex
+        align-items: center
+        flex-direction: column
+        gap: calcWidth1920(20)
+        &First
+          font-family: Tenor,sans-serif
+          font-size: calcWidth1920(90)
+        &Any
+          font-family: Noto Light,sans-serif
+          font-size: calcWidth1920(40)
+          span
+            font-family: Roboto,sans-serif
+            font-weight: 700
+    &Image
+      z-index: 1
+      position: relative
+      align-self: flex-end
+      width: calcWidth1920(1200)
+      &:before
+        width: 100%
+        height: 100%
+        background-color: rgba(255, 255, 255, 0.46)
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+      img
+        object-fit: cover
+        width: 100%
+        height: auto
+        max-height: 100%
+    &Arrow
+      cursor: pointer
+      z-index: 6
+      position: absolute
+      bottom: calcWidth1920(15)
+      right: calcWidth1920(200)
+      width: calcWidth1920(100)
+      height: calcWidth1920(100)
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #093719
+      &Box
+        height: calcWidth1920(60)
+        svg
+          height: 100%
+          width: auto
+    &DecorLine
+      position: absolute
+      left: calcWidth1920(100)
+      bottom: 0
+      width: calcWidth1920(150)
+      height: calcWidth1920(3)
+      background-color: #093719
+  &Pavilion
+    padding: calcWidth1920(150) 0
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #FCF7CE
+    &Decor
+      position: absolute
+      top: 0
+      right: 0
+      width: calcWidth1920(350)
+      height: calcWidth1920(350)
+      border-radius: calcWidth1920(350)
+      background-color: white
+      opacity: 0.4
+    &Img
+      width: calcWidth1920(800)
+      img
+        width: 100%
+        height: auto
+    &Expo
+      color: white
+      opacity: 0.4
+      font-family: Tenor,sans-serif
+      letter-spacing: calcWidth1920(25)
+      font-size: calcWidth1920(300)
+      line-height: calcWidth1920(250)
+      position: absolute
+      bottom: 0
+      left: 0
+
+
+
+
+

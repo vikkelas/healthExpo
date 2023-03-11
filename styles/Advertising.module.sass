@@ -1,0 +1,88 @@
+@import 'mixin'
+
+.advertising
+  position: relative
+  padding: calcWidth1920(150) 0
+  &Background
+    z-index: 2
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    &:before
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      content: ''
+      background-color: rgba(82, 81, 81, 0.6)
+    img
+      object-fit: cover
+      width: 100%
+      height: auto
+      max-height: 100%
+  &Content
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    position: relative
+    z-index: 5
+    display: flex
+    gap: calcWidth1920(80)
+    flex-direction: column
+    h2
+      text-shadow: calcWidth1920(5) calcWidth1920(5) #000000
+      text-align: right
+      font-family: Tenor,sans-serif
+      font-size: calcWidth1920(110)
+      letter-spacing: calcWidth1920(8)
+      line-height: calcWidth1920(120)
+      color: #ffffff
+      max-width: calcWidth1920(900)
+      align-self: flex-end
+    &Info
+      display: flex
+      align-items: center
+      justify-content: space-evenly
+      p
+        text-shadow: calcWidth1920(5) calcWidth1920(5) rgba(0, 0, 0, 0.71)
+        color: white
+        max-width: calcWidth1920(670)
+        line-height: calcWidth1920(60)
+        font-size: calcWidth1920(40)
+      button
+        cursor: pointer
+        background-color: #FCF7CE
+        font-weight: 500
+        padding: calcWidth1920(15) calcWidth1920(40)
+        font-family: Noto,sans-serif
+        font-size: calcWidth1920(35)
+        border: none
+        border-radius: calcWidth1920(40)
+        box-shadow: calcWidth1920(4) calcWidth1920(-4) calcWidth1920(25) calcWidth1920(4) rgba(0, 0, 0, 1)
+    &Icons
+      display: flex
+      justify-content: space-around
+      &Item
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: calcWidth1920(20)
+        font-size: calcWidth1920(28)
+        color: white
+        span
+          max-width: calcWidth1920(300)
+          text-align: center
+        &Img
+          display: flex
+          justify-content: center
+          align-items: center
+          width: calcWidth1920(125)
+          img
+            width: 100%
+            height: auto
+            max-height: 100%
+
+
+

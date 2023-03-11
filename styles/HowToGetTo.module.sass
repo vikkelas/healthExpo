@@ -1,0 +1,64 @@
+@import 'mixin'
+
+.address
+  max-width: calcWidth1920(1600)
+  margin: 0 auto
+  padding: calcWidth1920(50) 0
+  &Title
+    display: flex
+    flex-direction: column
+    h2
+      font-family: Tenor,sans-serif
+      font-size: calcWidth1920(60)
+      color: #093719
+    span
+      width: 20%
+      height: calcWidth1920(3)
+      background-color: #093719
+  &Main
+    width: 100%
+    margin-top: calcWidth1920(70)
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: calcWidth1920(60)
+    &Map
+      width: calcWidth1920(800)
+      height: calcWidth1920(400)
+      &Ymap
+        width: 100%
+        height: 100%
+    &Info
+      display: flex
+      flex-direction: column
+      padding: calcWidth1920(40)
+      border-radius: calcWidth1920(30)
+      color: white
+      background-color: #5b8b27
+      gap: calcWidth1920(30)
+      h3
+        font-family: Tenor,sans-serif
+        font-size: calcWidth1920(28)
+      &Links
+        align-self: center
+        display: flex
+        flex-direction: column
+        gap: calcWidth1920(10)
+        &Link
+          display: flex
+          align-items: center
+          color: white
+          gap: calcWidth1920(15)
+          text-decoration: none
+          span
+            max-width: calcWidth1920(200)
+          &Icon
+            width: calcWidth1920(25)
+            height: calcWidth1920(25)
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+              width: 100%
+              height: auto
+              max-height: 100%

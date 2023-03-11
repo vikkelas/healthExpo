@@ -1,0 +1,98 @@
+@import "mixin"
+
+.thematics
+  position: relative
+  margin-top: calcWidth1920(150)
+  background-color: #5B8B27
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: calcWidth1920(25)
+  padding: calcWidth1920(85) 0 calcWidth1920(150)
+  &Title
+    font-family: Tenor,sans-serif
+    font-size: calcWidth1920(80)
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    letter-spacing: calcWidth1920(5.5)
+    line-height: calcWidth1920(100)
+    text-align: center
+    font-weight: 400
+    color: white
+  &List
+    font-family: Roboto, sans-serif
+    display: grid
+    grid-template-columns: repeat(3,calcWidth1920(350))
+    justify-content: center
+    gap: calcWidth1920(10)
+    &Item
+      cursor: pointer
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: relative
+      width: calcWidth1920(350)
+      height: calcWidth1920(350)
+      &Decor
+        width: 100%
+        height: 100%
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        background-color: white
+      img
+        position: absolute
+        top: 0
+        left: 0
+        max-width: 100%
+        width: auto
+        height: 100%
+        object-fit: cover
+        opacity: 30%
+        transition: opacity 0.4s linear
+      &:hover img
+        opacity: 70%
+        transition: opacity 0.4s linear
+      &Title
+        max-width: calcWidth1920(280)
+        position: relative
+        z-index: 5
+        font-family: Roboto, sans-serif
+        font-size: calcWidth1920(24)
+        color: #093719
+        text-align: center
+      &Text
+        opacity: 0
+        position: absolute
+        flex-direction: column
+        z-index: 10
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        padding: calcWidth1920(40)
+        background-color: #FCF7CE
+        box-shadow: 0 0 9px 1px rgba(91, 128, 28, 1)
+        font-size: calcWidth1920(18)
+  &Med
+    z-index: 20
+    position: absolute
+    bottom: -3%
+    left: 10%
+    width: calcWidth1920(450)
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 100%
+      height: auto
+      max-height: 100%
+
+
+

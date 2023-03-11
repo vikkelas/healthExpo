@@ -1,0 +1,70 @@
+@import './mixin'
+
+.mainTitle
+  position: relative
+  &Main
+    display: flex
+    justify-content: flex-end
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    &Img
+      position: absolute
+      top: 0
+      left: 0
+      width: calcWidth1920(1500)
+      img
+        width: 100%
+        height: auto
+    &Info
+      max-width: calcWidth1920(1104)
+      position: relative
+      z-index: 10
+      margin-top: calcWidth1920(150)
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      h2
+        font-family: "Noto", sans-serif
+        color: #D61E1E
+        font-size: calcWidth1920(65)
+        line-height: calcWidth1920(95)
+      h1
+        font-family: "Tenor", sans-serif
+        font-weight: 300
+        font-size: calcWidth1920(180)
+        letter-spacing: calcWidth1920(3.8)
+        color: #5B8B27
+        text-align: right
+        line-height: calcWidth1920(200)
+      &Decor
+        display: block
+        width: calcWidth1920(882)
+        height: calcWidth1920(7)
+        background-color: #5B8B27
+        margin-top: calcWidth1920(45)
+      &Location
+        display: flex
+        align-items: center
+        gap: calcWidth1920(22)
+        margin-top: calcWidth1920(30)
+        color: #4F3329
+        font-family: Noto,sans-serif
+        font-size: calcWidth1920(55)
+        line-height: calcWidth1920(75)
+        span
+          display: block
+          width: calcWidth1920(22)
+          height: calcWidth1920(22)
+          border-radius: calcWidth1920(22)
+          background-color: #4F3329
+  &Text
+    position: relative
+    z-index: 10
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    padding: calcWidth1920(130) 0 calcWidth1920(110)
+    p
+      font-family: "Noto Light", sans-serif
+      font-size: calcWidth1920(35)
+      color: #093719
+      text-align: center

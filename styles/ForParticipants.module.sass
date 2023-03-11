@@ -1,0 +1,101 @@
+@import "mixin"
+
+.participants
+  z-index: 2
+  background-color: #FCF7CE
+  position: relative
+  padding: calcWidth1920(150) 0
+  &Decor
+    position: absolute
+    top: 5%
+    right: calcWidth1920(500)
+
+    z-index: 5
+    width: calcWidth1920(700)
+    height: calcWidth1920(700)
+    border-radius: calcWidth1920(700)
+    background-color: rgba(157, 201, 109, 0.4)
+  &Container
+    position: relative
+    z-index: 10
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(2, calcWidth1920(700))
+    justify-content: space-between
+    &Content
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: calcWidth1920(80)
+      &Title
+        width: 100%
+        display: flex
+        flex-direction: column
+        &:nth-child(n+2)
+          align-items: flex-end
+        h1
+          margin-left: calcWidth1920(60)
+          font-family: Tenor,sans-serif
+          font-size: calcWidth1920(60)
+          color: #093719
+        span
+          display: block
+          width: 40%
+          height: calcWidth1920(3)
+          background-color: #093719
+      &Main
+        color: #093719
+        font-family: Roboto,sans-serif
+        font-size: calcWidth1920(22)
+        max-width: calcWidth1920(500)
+        display: flex
+        flex-direction: column
+        gap: calcWidth1920(50)
+        ul
+          li
+            list-style: disc
+      &Img
+        width: 100%
+        height: calcWidth1920(400)
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          object-fit: cover
+          width: 100%
+          height: auto
+          max-height: 100%
+      button
+        cursor: pointer
+        color: white
+        font-weight: 500
+        font-family: Noto,sans-serif
+        border: none
+        font-size: calcWidth1920(30)
+        background-color: #093719
+        padding: calcWidth1920(15) calcWidth1920(80)
+        border-radius: calcWidth1920(100)
+        box-shadow: 0 calcWidth1920(10) calcWidth1920(35) rgba(0, 0, 0, 0.6)
+
+
+  &DecorFooter
+    position: absolute
+    bottom: 0
+    right: calcWidth1920(100)
+    font-family: Tenor,sans-serif
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.5)
+    font-size: calcWidth1920(300)
+    letter-spacing: calcWidth1920(25)
+    line-height: calcWidth1920(210)
+  &DecorLeaves
+    z-index: 10
+    position: absolute
+    bottom: calcWidth1920(-180)
+    right: calcWidth1920(200)
+    width: calcWidth1920(500)
+    img
+      width: 100%
+      height: auto
+

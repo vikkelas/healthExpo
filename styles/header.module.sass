@@ -1,2 +1,45 @@
 @import './mixin'
 
+.header
+  background-color: #FCF7CE
+  &Container
+    display: flex
+    width: calcWidth1920(1600)
+    margin: 0 auto
+    padding: calcWidth1920(15) 0
+    align-items: center
+    justify-content: space-between
+    &Logo
+      width: calcWidth1920(143)
+      img
+        width: 100%
+        height: auto
+    &Nav
+      &List
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: calcWidth1920(40)
+        color: #093719
+        &Item
+          text-transform: uppercase
+          font-size: calcWidth1920(16)
+          max-width: 100%
+          border-bottom: 2px solid rgba(91, 139, 39, 0)
+          transition-property: color, border-bottom
+          transition-duration: 0.2s
+          transition-timing-function: ease-in-out
+          &:hover
+            color: #5B8B27
+            border-bottom: 2px solid #5B8B27
+    &Icons
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: calcWidth1920(32)
+      &Item
+        width: calcWidth1920(41)
+        height: calcWidth1920(41)
+        svg
+          width: 100%
+          height: auto

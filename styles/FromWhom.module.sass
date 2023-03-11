@@ -1,0 +1,92 @@
+@import './mixin'
+
+.fromWhom
+  position: relative
+  &Container
+    display: flex
+    flex-direction: column
+    gap: calcWidth1920(180)
+    width: calcWidth1920(1600)
+    margin: 0 auto
+    background-color: #FCF7CE
+    padding: calcWidth1920(150) calcWidth1920(138) calcWidth1920(120)
+    &Title
+      color: #093719
+      display: flex
+      flex-direction: column
+      gap: calcWidth1920(30)
+      align-self: flex-end
+      align-items: center
+      max-width: calcWidth1920(737)
+      h2
+        font-weight: 300
+        font-family: Tenor,sans-serif
+        font-size: calcWidth1920(100)
+      p
+        font-family: Noto,sans-serif
+        font-size: calcWidth1920(35)
+        text-align: center
+    &List
+      display: flex
+      gap: calcWidth1920(75)
+      &Item
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: calcWidth1920(35)
+        width: calcWidth1920(283)
+        &Icon
+          display: flex
+          justify-content: center
+          align-items: center
+          height: calcWidth1920(100)
+          img
+            max-height: 100%
+            width: auto
+        p
+          color: #093719
+          text-align: center
+          font-family: Noto,sans-serif
+          font-size: calcWidth1920(18)
+          line-height: calcWidth1920(34)
+  &ImgDecor
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    top: calcWidth1920(-265)
+    transform: rotateZ(10deg)
+    right: calcWidth1920(-10)
+    width: calcWidth1920(650)
+    img
+      max-width: 100%
+      height: 100%
+  &BoxDecor
+    position: absolute
+    top: calcWidth1920(80)
+    left: 0
+    &Container
+      position: relative
+      width: calcWidth1920(600)
+      height: calcWidth1920(500)
+      background-color: #093719
+      &Leaves
+        z-index: 10
+        position: absolute
+        top: -35%
+        right: -40%
+        width: calcWidth1920(450)
+        height: calcWidth1920(450)
+        img
+          max-width: 100%
+          height: 100%
+      &Tablet
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: calcWidth1920(350)
+        height: calcWidth1920(350)
+        img
+          max-width: 100%
+          height: 100%

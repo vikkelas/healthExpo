@@ -1,0 +1,35 @@
+@import 'mixin'
+
+.pavilionList
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  width: calcWidth1920(1600)
+  margin: calcWidth1920(150) auto calcWidth1920(80)
+  justify-items: center
+  &Item
+    max-width: calcWidth1920(300)
+    display: grid
+    justify-items: center
+    gap: calcWidth1920(40)
+    color: #093719
+    font-family: Noto,sans-serif
+    &Title
+      text-align: center
+      font-weight: 700
+      font-size: calcWidth1920(35)
+    &Info
+      font-size: calcWidth1920(30)
+      span
+        font-weight: 700
+    &Box
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: calcWidth1920(40)
+      &Icon
+        width: calcWidth1920(80)
+        img
+          width: 100%
+          height: auto
+          max-height: 100%
