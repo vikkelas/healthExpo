@@ -1,8 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import style from '../styles/header.module.sass'
-const Header = () => {
+import {useRouter} from "next/router";
+import {useCallback, useEffect, useState} from "react";
+import {motion} from 'framer-motion';
 
+const Header = () => {
+    const [activePage, setActivePage] = useState<string>('')
+    const router = useRouter();
+    const changeActivePage = useCallback(()=>{
+        setActivePage(router.pathname.slice(1))
+    },[router])
+    useEffect(()=>{
+        changeActivePage()
+    },[changeActivePage])
     return (
         <header className={style.header}>
             <div className={style.headerContainer}>
@@ -20,24 +31,36 @@ const Header = () => {
                 </Link>
                 <nav className={style.headerContainerNav}>
                     <ul className={style.headerContainerNavList}>
-                        <li className={style.headerContainerNavListItem}>
+                        <motion.li
+                            initial={{color:'#093719'}}
+                            animate={activePage==='about-us'?{color: '#5B8B27'}:{color:'#093719'}}
+                            className={style.headerContainerNavListItem}>
                             <Link href={'/about-us'}>О компании</Link>
-                        </li>
-                        <li className={style.headerContainerNavListItem}>
+                        </motion.li>
+                        <motion.li
+                            initial={{color:'#093719'}}
+                            animate={activePage==='about-expo'?{color: '#5B8B27'}:{color:'#093719'}}
+                            className={style.headerContainerNavListItem}>
                             <Link href={'/about-expo'}>О выставке</Link>
-                        </li>
-                        <li className={style.headerContainerNavListItem}>
+                        </motion.li>
+                        <motion.li
+                            initial={{color:'#093719'}}
+                            animate={activePage==='visitors'?{color: '#5B8B27'}:{color:'#093719'}}
+                            className={style.headerContainerNavListItem}>
                             <Link href={'/visitors'}>Посетителям</Link>
-                        </li>
-                        <li className={style.headerContainerNavListItem}>
+                        </motion.li>
+                        <motion.li
+                            initial={{color:'#093719'}}
+                            animate={activePage==='about_us'?{color: '#5B8B27'}:{color:'#093719'}}
+                            className={style.headerContainerNavListItem}>
                             <Link href={'/about_us'}>Участникам</Link>
-                        </li>
-                        <li className={style.headerContainerNavListItem}>
-                            <Link href={'/about_us'}>Культурная программа</Link>
-                        </li>
-                        <li className={style.headerContainerNavListItem}>
+                        </motion.li>
+                        <motion.li
+                            initial={{color:'#093719'}}
+                            animate={activePage==='/contacts'?{color: '#5B8B27'}:{color:'#093719'}}
+                            className={style.headerContainerNavListItem}>
                             <Link href={'/contacts'}>Контакты</Link>
-                        </li>
+                        </motion.li>
                     </ul>
                 </nav>
                 <div className={style.headerContainerIcons}>

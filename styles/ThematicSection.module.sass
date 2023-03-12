@@ -22,7 +22,7 @@
   &List
     font-family: Roboto, sans-serif
     display: grid
-    grid-template-columns: repeat(3,calcWidth1920(350))
+    grid-template-columns: repeat(3,calcWidth1920(300))
     justify-content: center
     gap: calcWidth1920(10)
     &Item
@@ -32,8 +32,8 @@
       justify-content: center
       align-items: center
       position: relative
-      width: calcWidth1920(350)
-      height: calcWidth1920(350)
+      width: calcWidth1920(300)
+      height: calcWidth1920(300)
       &Decor
         width: 100%
         height: 100%
@@ -56,11 +56,13 @@
         opacity: 70%
         transition: opacity 0.4s linear
       &Title
+        padding: calcWidth1920(20)
         max-width: calcWidth1920(280)
         position: relative
         z-index: 5
         font-family: Roboto, sans-serif
-        font-size: calcWidth1920(24)
+        font-size: calcWidth1920(20)
+        text-shadow: calcWidth1920(1) calcWidth1920(1) rgba(18, 44, 5, 0.31)
         color: #093719
         text-align: center
       &Text
@@ -79,7 +81,7 @@
         padding: calcWidth1920(40)
         background-color: #FCF7CE
         box-shadow: 0 0 9px 1px rgba(91, 128, 28, 1)
-        font-size: calcWidth1920(18)
+        font-size: calcWidth1920(16)
   &Med
     z-index: 20
     position: absolute

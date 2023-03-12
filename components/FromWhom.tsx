@@ -10,7 +10,7 @@ const FromWhom = () => {
             <div className={style.fromWhomContainer}>
                 <div className={style.fromWhomContainerTitle}>
                     <h2>Для кого</h2>
-                    <p>Мы объединяем производителей и потребителей на одной площадке</p>
+                    <p>Она будет интересна как специалистам в области медицины, фармакологии, косметологии, так и посетителям, неравнодушным к своему здоровью и красоте.</p>
                 </div>
                 <ul className={style.fromWhomContainerList}>
                     {dataFile.fromWhom.map(item=>{
