@@ -1,0 +1,73 @@
+@import 'mixin'
+
+.main
+  &Title
+    position: relative
+    width: 100%
+    height: 100vh
+    &Background
+      z-index: 4
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        width: 100%
+        height: 100%
+        background: radial-gradient(100% 225.43% at 0% 100%, #FFFFFF 7.6%, rgba(255, 255, 255, 0.73) 54.48%, rgba(217, 217, 217, 0) 100%)
+      img
+        width: 100%
+        height: auto
+        max-height: 100%
+        object-fit: cover
+
+    &Container
+      max-width: calcWidth1920(1600)
+      margin: 0 auto
+      height: 100%
+      position: relative
+      z-index: 6
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      &Info
+        max-width: 50%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: calcWidth1920(40)
+        h1
+          font-family: Tenor,sans-serif
+          color: #093719
+          font-weight: 600
+          font-size: calcWidth1920(100)
+          line-height: calcWidth1920(130)
+          letter-spacing: calcWidth1920(9)
+        &Text
+          background-color: rgba(255, 255, 255, 0.8)
+          border-radius: calcWidth1920(25)
+          padding: calcWidth1920(25)
+          text-align: left
+          display: flex
+          flex-direction: column
+          gap: calcWidth1920(20)
+          font-family: Noto Light,sans-serif
+          font-size: calcWidth1920(20)
+          line-height: calcWidth1920(35)
+        button
+          cursor: pointer
+          align-self: center
+          color: #FFFFFF
+          font-family: Noto Medium,sans-serif
+          border: none
+          padding: calcWidth1920(20) calcWidth1920(70)
+          border-radius: calcWidth1920(60)
+          font-size: calcWidth1920(20)
+          background-color: #5b8b27
+
+

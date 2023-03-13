@@ -14,7 +14,7 @@ const MainTitle = () => {
                         height={884}/>
                 </div>
                 <div className={style.mainTitleMainInfo}>
-                    <h2>18 - 23 мая 2023</h2>
+                    <h2>29 апреля - 1 мая 2023</h2>
                     <h1>Здоровье EXPO</h1>
                     <span className={style.mainTitleMainInfoDecor}/>
                     <div className={style.mainTitleMainInfoLocation}>
