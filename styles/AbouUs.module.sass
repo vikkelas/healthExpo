@@ -4,7 +4,6 @@
   &Title
     position: relative
     width: 100%
-    height: 100vh
     &Background
       z-index: 4
       position: absolute
@@ -19,13 +18,12 @@
         content: ''
         width: 100%
         height: 100%
-        background: radial-gradient(100% 225.43% at 0% 100%, #FFFFFF 7.6%, rgba(255, 255, 255, 0.73) 54.48%, rgba(217, 217, 217, 0) 100%)
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFFFF 90.42%)
       img
         width: 100%
         height: auto
         max-height: 100%
         object-fit: cover
-
     &Container
       max-width: calcWidth1920(1600)
       margin: 0 auto
@@ -36,11 +34,12 @@
       justify-content: flex-start
       align-items: center
       &Info
+        padding: calcWidth1920(45) 0
         max-width: 50%
         display: flex
         flex-direction: column
         align-items: flex-start
-        gap: calcWidth1920(40)
+        gap: calcWidth1920(50)
         h1
           font-family: Tenor,sans-serif
           color: #093719
@@ -49,25 +48,76 @@
           line-height: calcWidth1920(130)
           letter-spacing: calcWidth1920(9)
         &Text
-          background-color: rgba(255, 255, 255, 0.8)
+          box-shadow: 0 0 calcWidth1920(20) calcWidth1920(2) rgba(0, 0, 0, 0.7)
+          color: white
+          background-color: rgb(91, 139, 39)
           border-radius: calcWidth1920(25)
-          padding: calcWidth1920(25)
+          padding: calcWidth1920(55)
           text-align: left
           display: flex
           flex-direction: column
           gap: calcWidth1920(20)
           font-family: Noto Light,sans-serif
-          font-size: calcWidth1920(20)
-          line-height: calcWidth1920(35)
+          font-size: calcWidth1920(18)
+          line-height: calcWidth1920(30)
         button
+          margin-left: calcWidth1920(20)
           cursor: pointer
-          align-self: center
+          align-self: flex-start
           color: #FFFFFF
           font-family: Noto Medium,sans-serif
           border: none
           padding: calcWidth1920(20) calcWidth1920(70)
           border-radius: calcWidth1920(60)
           font-size: calcWidth1920(20)
-          background-color: #5b8b27
+          background-color: #093719
+  &Decor
+    max-width: calcWidth1920(1600)
+    margin: calcWidth1920(110) auto
+    display: flex
+    justify-content: flex-start
+    &Line
+      width: calcWidth1920(700)
+      height: calcWidth1920(4)
+      background-color: #093719
+  &PastEvents
+    color: #093719
+    font-family: Tenor,sans-serif
+    font-size: calcWidth1920(80)
+    text-align: center
+    background: linear-gradient(0deg, #5b8b27, transparent)
+    &Container
+      display: flex
+      align-items: center
+      gap: calcWidth1920(30)
+      max-width: calcWidth1920(1600)
+      margin: 0 auto
+      width: 100%
+      &Btn
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        width: calcWidth1920(150)
+        height: calcWidth1920(150)
+        svg
+          max-width: 100%
+          width: 100%
+          height: auto
+      &Swiper
+        height: calcWidth1920(600)
+        max-width: 100%
+        &Slide
+          padding: calcWidth1920(30)
+          height: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 100%
+          img
+            width: 100%
+            height: auto
+            max-height: 100%
+
 
 

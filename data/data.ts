@@ -1,3 +1,5 @@
+import {string} from "prop-types";
+
 interface FormWhomItem {
   title: string;
   imgUrl: string;
@@ -17,10 +19,14 @@ export interface PavilionInfo {
   humans: number
 }
 
+interface PastEvents {
+  nameFile: string;
+}
 export interface DataFile {
   fromWhom: FormWhomItem[];
   thematicSection: ThematicSection[];
   pavilionInfo: PavilionInfo[];
+  pastEvent: PastEvents[];
 }
 
 const data:DataFile = {
@@ -121,5 +127,34 @@ const data:DataFile = {
       humans: 20
     }
   ],
-}
+  pastEvent: [
+    {
+      nameFile: '1.jpg'
+    },
+    {
+      nameFile: '2.jpg'
+    },
+    {
+      nameFile: '3.jpg'
+    },
+    {
+      nameFile: '4.jpg'
+    },
+    {
+      nameFile: '5.jpg'
+    },
+    {
+      nameFile: '6.jpg'
+    },
+    {
+      nameFile: '7.jpg'
+    },
+    {
+      nameFile: '8.jpg'
+    },
+    {
+      nameFile: '9.jpg'
+    },
+  ]
+};
 export default data;

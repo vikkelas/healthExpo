@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import style from '../styles/header.module.sass'
 import {useRouter} from "next/router";
-import {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {motion} from 'framer-motion';
-
+import Banner from "@/components/Banner/Banner";
 const Header = () => {
+    const [bannerStatus, setBannerStatus] = useState<boolean>(true)
     const [activePage, setActivePage] = useState<string>('')
     const router = useRouter();
     const changeActivePage = useCallback(()=>{
@@ -16,6 +17,7 @@ const Header = () => {
     },[changeActivePage])
     return (
         <header className={style.header}>
+            {bannerStatus&&<Banner setBanner={setBannerStatus}/>}
             <div className={style.headerContainer}>
                 <Link
                     href={'/'}
