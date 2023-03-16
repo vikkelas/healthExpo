@@ -85,7 +85,7 @@
     font-family: Tenor,sans-serif
     font-size: calcWidth1920(80)
     text-align: center
-    background: linear-gradient(0deg, #5b8b27, transparent)
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(191, 201, 181, 0.203487) 16.98%, rgba(146, 173, 116, 0.565625) 35.73%, rgba(111, 152, 68, 0.838685) 56.56%, rgba(102, 146, 55, 0.910772) 81.56%, #5B8B27 100%)
     &Container
       display: flex
       align-items: center
@@ -118,6 +118,47 @@
             width: 100%
             height: auto
             max-height: 100%
+  &Gallery
+    background: linear-gradient(180deg, #5B8B27 18.02%, rgba(101, 145, 53, 0.923676) 35.73%, rgba(111, 152, 68, 0.838346) 51.87%, rgba(131, 164, 95, 0.684751) 71.15%, rgba(166, 185, 145, 0.406158) 86.25%, rgba(217, 217, 217, 0) 100%)
+    &Container
+      padding: calcWidth1920(30) 0
+      margin: 0 auto
+      max-width: calcWidth1920(1600)
+      &Info
+        margin-top: calcWidth1920(50)
+        display: flex
+        justify-content: space-between
+        &Item
+          padding: calcWidth1920(30) calcWidth1920(35)
+          gap: calcWidth1920(30)
+          display: flex
+          align-items: center
+          width: calcWidth1920(750)
+          background-color: #ffffff
+          border-radius: calcWidth1920(30)
+          box-shadow: 0 0 calcWidth1920(14) calcWidth1920(2) rgba(0, 0, 0, 0.44)
+          &:nth-child(n+2)
+            align-self: flex-end
+          p
+            width: calcWidth1920(400)
+            font-size: calcWidth1920(20)
+            color: #093719
+          &Image
+            border-radius: calcWidth1920(30)
+            overflow: hidden
+            width: calcWidth1920(550)
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+              width: 100%
+              height: auto
+              max-height: 100%
+      &Video
+        margin-top: calcWidth1920(100)
+
+
+
 
 
 

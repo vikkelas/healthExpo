@@ -1,10 +1,26 @@
 import style from '../styles/AbouUs.module.sass';
+import {GetStaticProps, NextPage} from "next";
 import Image from "next/image";
 import {v4 as uuidv4} from 'uuid';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper";
 import data from "@/data/data";
-const AboutUs = () => {
+
+export const getStaticProps:GetStaticProps = async () => {
+    const response = await fetch('http://localhost:3000/api/gallery')
+    const gallery = await response.json()
+    return {
+        props: {
+            gallery,
+        }
+    }
+}
+
+interface Props {
+    gallery: { namePhoto:string[] }
+}
+
+const AboutUs:NextPage<Props> = (props) => {
     const {pastEvent} = data;
     return (
         <main className={style.main}>
@@ -76,11 +92,58 @@ const AboutUs = () => {
                         </svg>
                     </div>
                 </div>
-
             </section>
-            <section>
+            <section className={style.mainGallery}>
+                <div className={style.mainGalleryContainer}>
+                    <div className={style.mainGalleryContainerInfo}>
+                        <div className={style.mainGalleryContainerInfoItem}>
+                            <div className={style.mainGalleryContainerInfoItemImage}>
+                                <Image
+                                    src={'/images/about-us/close-up-of-pen-with-tablet-on-the-table-min.jpg'}
+                                    alt={'Партнеры Здоровье EXPO'}
+                                    width={600}
+                                    height={400}
+                                />
+                            </div>
+                            <p>За годы работы мы выстроили долгосрочные доверительные отношения с экспонентами.</p>
+                        </div>
+                        <div className={style.mainGalleryContainerInfoItem}>
 
+                            <div className={style.mainGalleryContainerInfoItemImage}>
+                                <Image
+                                    src={'/images/about-us/business-team-meeting-boardroom-min.jpg'}
+                                    alt={'Партнеры Здоровье EXPO'}
+                                    width={600}
+                                    height={400}
+                                />
+                            </div>
+                            <p>В «ЮрБрус» своя команда маркетологов, что позволяет максимально быстро развивать наш проект и повышать общую узнаваемость.</p>
+                        </div>
+                    </div>
+                    <div className={style.mainGalleryContainerVideo}>
+                        <h2>Галерея наших мероприятий</h2>
+                        <div>
+                            <Swiper>
+                                {props.gallery.namePhoto.map((item)=>{
+                                    return(
+                                        <SwiperSlide
+                                            key={uuidv4()}
+                                        >
+                                            <Image
+                                                src={`/images/gallery/${item}`}
+                                                alt={'Ниши фото'}
+                                                width={600}
+                                                height={400}
+                                            />
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
             </section>
+
         </main>
     );
 };
