@@ -1,0 +1,42 @@
+@import '../styles/mixin'
+
+.videoLink
+  padding: calcWidth1920(60) 0
+  width: calcWidth1920(1600)
+  margin: 0 auto
+  h2
+    color: #093719
+    font-family: Tenor,sans-serif
+    font-size: calcWidth1920(65)
+  &Container
+    width: 100%
+    height: calcWidth1920(400)
+    position: relative
+    margin-top: calcWidth1920(60)
+    display: flex
+    align-items: center
+    &Btn
+      z-index: 25
+      cursor: pointer
+      padding: calcWidth1920(10)
+      border-radius: calcWidth1920(55)
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      width: calcWidth1920(55)
+      height: calcWidth1920(55)
+      background-color: #FFFFFF
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        width: 100%
+        height: auto
+      &:nth-child(n+2)
+        right: 0
+    &Swiper
+      width: 100%
+      &Slide
+        display: flex
+        justify-content: center
+        align-items: center

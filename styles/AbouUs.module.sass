@@ -18,7 +18,7 @@
         content: ''
         width: 100%
         height: 100%
-        background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFFFF 90.42%)
+        background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, #FCF7CE 100%)
       img
         width: 100%
         height: auto
@@ -42,8 +42,9 @@
         gap: calcWidth1920(50)
         h1
           font-family: Tenor,sans-serif
-          color: #093719
-          font-weight: 600
+          color: #5b8b27
+          text-shadow: calcWidth1920(5) calcWidth1920(4) calcWidth1920(10) rgb(241, 241, 241)
+          font-weight: 700
           font-size: calcWidth1920(100)
           line-height: calcWidth1920(130)
           letter-spacing: calcWidth1920(9)
@@ -119,8 +120,10 @@
             height: auto
             max-height: 100%
   &Gallery
+    position: relative
     background: linear-gradient(180deg, #5B8B27 18.02%, rgba(101, 145, 53, 0.923676) 35.73%, rgba(111, 152, 68, 0.838346) 51.87%, rgba(131, 164, 95, 0.684751) 71.15%, rgba(166, 185, 145, 0.406158) 86.25%, rgba(217, 217, 217, 0) 100%)
     &Container
+      color: #093719
       padding: calcWidth1920(30) 0
       margin: 0 auto
       max-width: calcWidth1920(1600)
@@ -142,7 +145,6 @@
           p
             width: calcWidth1920(400)
             font-size: calcWidth1920(20)
-            color: #093719
           &Image
             border-radius: calcWidth1920(30)
             overflow: hidden
@@ -154,8 +156,8 @@
               width: 100%
               height: auto
               max-height: 100%
-      &Video
-        margin-top: calcWidth1920(100)
+
+
 
 
 

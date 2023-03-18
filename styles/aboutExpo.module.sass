@@ -1,0 +1,112 @@
+@import 'mixin'
+
+.main
+  &Title
+    width: 100%
+    height: 100%
+    position: relative
+    &Background
+      z-index: 5
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        content: ''
+        background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%, #FCF7CE 100%)
+      img
+        width: 100%
+        height: auto
+        max-height: 100%
+        object-fit: cover
+    &Content
+      max-width: calcWidth1920(1600)
+      margin: 0 auto
+      position: relative
+      z-index: 7
+      color: #5b8b27
+      padding: calcWidth1920(100) 0
+      h1
+        text-shadow: calcWidth1920(5) calcWidth1920(4) calcWidth1920(10) rgb(241, 241, 241)
+        font-weight: 700
+        font-size: calcWidth1920(100)
+        font-family: Tenor,sans-serif
+      &Box
+        box-shadow: 0 0 calcWidth1920(21) calcWidth1920(1) rgb(0, 0, 0)
+        margin-top: calcWidth1920(30)
+        padding: calcWidth1920(40) calcWidth1920(60)
+        border-radius: calcWidth1920(40)
+        color: #5b8b27
+        background-color: #FFFFFF
+        font-family: Noto, sans-serif
+        font-size: calcWidth1920(26)
+        max-width: calcWidth1920(900)
+        span
+          font-weight: 700
+        h2
+          margin-top: calcWidth1920(30)
+          font-size: calcWidth1920(20)
+          font-weight: 700
+        ul
+          margin-top: calcWidth1920(15)
+          font-size: calcWidth1920(20)
+          li
+            list-style: disc
+
+
+  &Them
+    display: flex
+    flex-direction: column
+    width: calcWidth1920(1600)
+    padding: calcWidth1920(60) 0
+    margin: 0 auto
+    h2
+      font-family: Tenor,sans-serif
+      font-size: calcWidth1920(70)
+      line-height: calcWidth1920(80)
+      max-width: calcWidth1920(900)
+      color: #5b8b27
+    &List
+      padding: calcWidth1920(60) 0
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: calcWidth1920(20)
+      &Item
+        padding: calcWidth1920(20)
+        background-color: #5b8b27
+        border-radius: calcWidth1920(70)
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        gap: calcWidth1920(20)
+        span
+          color: #FFFFFF
+          text-align: left
+          font-family: Noto, sans-serif
+          font-size: calcWidth1920(20)
+        &Img
+          width: calcWidth1920(60)
+          height: calcWidth1920(60)
+          display: flex
+          justify-content: center
+          align-items: center
+          img
+            width: 100%
+            height: auto
+    &Btn
+      border-radius: calcWidth1920(40)
+      font-family: Roboto,sans-serif
+      align-self: center
+      max-width: 100%
+      font-size: calcWidth1920(26)
+      padding: calcWidth1920(20) calcWidth1920(40)
+      color: #5b8b27
+      border: 1px solid #5b8b27
+      background-color: #FFFFFF
+      box-shadow: 0 0 calcWidth1920(16) calcWidth1920(2) rgba(87, 161, 24, 0.82)

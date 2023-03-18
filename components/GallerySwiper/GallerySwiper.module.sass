@@ -1,0 +1,123 @@
+@import "../../styles/mixin"
+.mainImages
+  color: #093719
+  padding: calcWidth1920(30) 0
+  margin: calcWidth1920(100) auto 0
+  max-width: calcWidth1920(1600)
+  h2
+    font-family: Tenor,sans-serif
+    font-size: calcWidth1920(75)
+  &Wrapper
+    position: relative
+    width: 100%
+    &BtnNext
+      right: 0
+      margin-right: calcWidth1920(5)
+    &BtnPrev
+      left: 0
+      margin-left: calcWidth1920(5)
+    &BtnNext,
+    &BtnPrev
+      cursor: pointer
+      background-color: #a7c47b
+      z-index: 10
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      width: calcWidth1920(50)
+      height: calcWidth1920(50)
+      border-radius: calcWidth1920(50)
+      padding: calcWidth1920(5)
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        width: 100%
+        height: auto
+    &Slider
+      width: 100%
+      padding: calcWidth1920(20) 0
+      height: calcWidth1920(500)
+      &Slide
+        cursor: pointer
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          width: 100%
+          height: auto
+          max-height: 100%
+  &ModalNo
+    position: fixed
+    opacity: 0
+    pointer-events: none
+  &Modal
+    opacity: 1
+    z-index: 20
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    position: fixed
+    background-color: black
+    display: flex
+    justify-content: center
+    align-items: center
+    &Close
+      background-color: #FFFFFF
+      z-index: 21
+      position: absolute
+      top: 0
+      right: 0
+      display: flex
+      margin: calcWidth1920(40)
+      padding: calcWidth1920(10)
+      justify-content: center
+      align-items: center
+      border-radius: calcWidth1920(35)
+      width: calcWidth1920(35)
+      height: calcWidth1920(35)
+      cursor: pointer
+      img
+        width: 100%
+        height: auto
+    &BtnNext
+      right: 0
+      margin-right: calcWidth1920(30)
+    &BtnPrev
+      left: 0
+      margin-left: calcWidth1920(30)
+    &BtnNext,
+    &BtnPrev
+      cursor: pointer
+      background-color: #a7c47b
+      z-index: 10
+      top: 50%
+      position: absolute
+      transform: translate(0, -50%)
+      width: calcWidth1920(50)
+      height: calcWidth1920(50)
+      border-radius: calcWidth1920(50)
+      padding: calcWidth1920(5)
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        width: 100%
+        height: auto
+    &Swiper
+      width: 80%
+      height: 80%
+      &Slide
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        img
+          object-fit: contain
+          width: 100%
+          height: auto
+          max-height: 90vh

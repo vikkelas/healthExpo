@@ -3,8 +3,10 @@ import {GetStaticProps, NextPage} from "next";
 import Image from "next/image";
 import {v4 as uuidv4} from 'uuid';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, Navigation} from "swiper";
+import {Autoplay,  Navigation} from "swiper";
 import data from "@/data/data";
+import GallerySwiper from "@/components/GallerySwiper/GallerySwiper";
+import VideoSwiper from "@/components/VideoSwiper/VideoSwiper";
 
 export const getStaticProps:GetStaticProps = async () => {
     const response = await fetch('http://localhost:3000/api/gallery')
@@ -67,12 +69,11 @@ const AboutUs:NextPage<Props> = (props) => {
                         spaceBetween={50}
                         modules={[Navigation, Autoplay]}
                         className={style.mainPastEventsContainerSwiper}>
-                        {pastEvent.map((item)=>{
+                        {pastEvent.map((item, index)=>{
                             return(
                                 <SwiperSlide
                                     key={uuidv4()}
                                     className={style.mainPastEventsContainerSwiperSlide}
-
                                 >
                                     <Image
                                         src={`/images/pastEvent/${item.nameFile}`}
@@ -108,7 +109,6 @@ const AboutUs:NextPage<Props> = (props) => {
                             <p>За годы работы мы выстроили долгосрочные доверительные отношения с экспонентами.</p>
                         </div>
                         <div className={style.mainGalleryContainerInfoItem}>
-
                             <div className={style.mainGalleryContainerInfoItemImage}>
                                 <Image
                                     src={'/images/about-us/business-team-meeting-boardroom-min.jpg'}
@@ -120,28 +120,9 @@ const AboutUs:NextPage<Props> = (props) => {
                             <p>В «ЮрБрус» своя команда маркетологов, что позволяет максимально быстро развивать наш проект и повышать общую узнаваемость.</p>
                         </div>
                     </div>
-                    <div className={style.mainGalleryContainerVideo}>
-                        <h2>Галерея наших мероприятий</h2>
-                        <div>
-                            <Swiper>
-                                {props.gallery.namePhoto.map((item)=>{
-                                    return(
-                                        <SwiperSlide
-                                            key={uuidv4()}
-                                        >
-                                            <Image
-                                                src={`/images/gallery/${item}`}
-                                                alt={'Ниши фото'}
-                                                width={600}
-                                                height={400}
-                                            />
-                                        </SwiperSlide>
-                                    )
-                                })}
-                            </Swiper>
-                        </div>
-                    </div>
                 </div>
+                <GallerySwiper data={props.gallery}/>
+                <VideoSwiper/>
             </section>
 
         </main>
