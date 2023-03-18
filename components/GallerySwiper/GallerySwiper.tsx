@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import style from "./GallerySwiper.module.sass";
 import Image from "next/image";
 import {v4 as uuidv4} from "uuid";
@@ -18,7 +18,7 @@ const GallerySwiper:NextPage<PropsGallery> = (props) => {
     const swiper1Ref = useRef<React.MutableRefObject<null>>(null);
     const swiper2Ref = useRef();
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (swiper1Ref.current !== null) {
             // @ts-ignore
             swiper1Ref.current.controller.control = swiper2Ref.current;

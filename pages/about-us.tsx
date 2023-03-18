@@ -1,5 +1,5 @@
 import style from '../styles/AbouUs.module.sass';
-import {GetStaticProps, NextPage} from "next";
+import {GetServerSideProps, NextPage} from "next";
 import Image from "next/image";
 import {v4 as uuidv4} from 'uuid';
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -8,7 +8,7 @@ import data from "@/data/data";
 import GallerySwiper from "@/components/GallerySwiper/GallerySwiper";
 import VideoSwiper from "@/components/VideoSwiper/VideoSwiper";
 
-export const getStaticProps:GetStaticProps = async () => {
+export const getServerSideProps:GetServerSideProps = async () => {
     const response = await fetch('http://localhost:3000/api/gallery')
     const gallery = await response.json()
     return {
@@ -37,9 +37,9 @@ const AboutUs:NextPage<Props> = (props) => {
                 </div>
                <div className={style.mainTitleContainer}>
                    <div className={style.mainTitleContainerInfo}>
-                       <h1>О компании «ЮрБрус»:</h1>
+                       <h1>О компании «ПроЭкспо»:</h1>
                        <div className={style.mainTitleContainerInfoText}>
-                           <p>Выставочная компания  «ЮрБрус» -  начала свою деятельность в 2007 г. За более чем 15 лет работы компания проделала стремительный путь развития. Коллектив  приобрёл практический опыт организации выставочно-ярмарочных мероприятий, в том числе и международного уровня.</p>
+                           <p>Выставочная компания  «ПроЭкспо» -  начала свою деятельность в 2007 г. За более чем 15 лет работы компания проделала стремительный путь развития. Коллектив  приобрёл практический опыт организации выставочно-ярмарочных мероприятий, в том числе и международного уровня.</p>
                            <p>Мы успешно работали на таких известных площадках Москвы, как ВДНХ, Сокольнический выставочный центр, Тишинская площадь, Арбат и торговые центры.   </p>
                        </div>
                        <button>Наши выставки</button>
