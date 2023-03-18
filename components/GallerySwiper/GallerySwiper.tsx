@@ -59,7 +59,7 @@ const GallerySwiper:NextPage<PropsGallery> = (props) => {
                             >
                                 <Image
                                     src={`/images/gallery/${item}`}
-                                    alt={'Ниши фото'}
+                                    alt={'Наши фото'}
                                     width={600}
                                     height={400}
                                 />
