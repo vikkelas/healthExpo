@@ -1,0 +1,60 @@
+@import '../../styles/mixin'
+.members
+  position: relative
+  background-color: #F3F2EA
+  padding: calcWidth1920(60) 0 calcWidth1920(150)
+  &Container
+    max-width: calcWidth1920(1600)
+    margin: 0 auto
+    &Text
+      display: flex
+      flex-direction: column
+      gap: calcWidth1920(50)
+      &Title
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: calcWidth1920(40)
+        h1
+          font-family: Tenor,sans-serif
+          font-size: calcWidth1920(65)
+          color: #093719
+          letter-spacing: calcWidth1920(3)
+          line-height: calcWidth1920(60)
+          max-width: calcWidth1920(600)
+        span
+          display: block
+          width: calcWidth1920(480)
+          height: calcWidth1920(3)
+          background-color: #093719
+      &List
+        display: flex
+        flex-direction: column
+        gap: calcWidth1920(23)
+        &Item
+          display: flex
+          gap: calcWidth1920(60)
+          align-items: center
+          &Decor
+            content: ''
+            display: block
+            width: calcWidth1920(115)
+            height: calcWidth1920(115)
+            border-radius: calcWidth1920(115)
+          &:nth-child(1) span
+            background-color: #093719
+          &:nth-child(2) span
+            background-color: #5b8b27
+          &:nth-child(3) span
+            background-color: #FCF7CE
+          p
+            font-size: calcWidth1920(40)
+            max-width: calcWidth1920(600)
+            font-family: "Noto Light", sans-serif
+    &Image
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(0, -50%)
+
+

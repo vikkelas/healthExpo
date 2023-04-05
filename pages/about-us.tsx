@@ -4,26 +4,28 @@ import Image from "next/image";
 import {v4 as uuidv4} from 'uuid';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay,  Navigation} from "swiper";
-import data from "@/data/data";
 import GallerySwiper from "@/components/GallerySwiper/GallerySwiper";
 import VideoSwiper from "@/components/VideoSwiper/VideoSwiper";
 
 export const getServerSideProps:GetServerSideProps = async () => {
-    const response = await fetch('http://localhost:3000/api/gallery')
-    const gallery = await response.json()
+    const responsePhoto = await fetch('http://localhost:3000/api/gallery');
+    const responseBanners = await fetch('http://localhost:3000/api/banners');
+    const gallery = await responsePhoto.json()
+    const banners = await responseBanners.json()
     return {
         props: {
             gallery,
+            banners
         }
     }
 }
 
 interface Props {
-    gallery: { namePhoto:string[] }
+    gallery: { namePhoto:string[]; }
+    banners: { nameBanners: string [];}
 }
 
 const AboutUs:NextPage<Props> = (props) => {
-    const {pastEvent} = data;
     return (
         <main className={style.main}>
            <section className={style.mainTitle}>
@@ -37,12 +39,12 @@ const AboutUs:NextPage<Props> = (props) => {
                 </div>
                <div className={style.mainTitleContainer}>
                    <div className={style.mainTitleContainerInfo}>
-                       <h1>О компании «ПроЭкспо»:</h1>
+                       <h1>Компания «ПроЭкспо»</h1>
                        <div className={style.mainTitleContainerInfoText}>
-                           <p>Выставочная компания  «ПроЭкспо» -  начала свою деятельность в 2007 г. За более чем 15 лет работы компания проделала стремительный путь развития. Коллектив  приобрёл практический опыт организации выставочно-ярмарочных мероприятий, в том числе и международного уровня.</p>
-                           <p>Мы успешно работали на таких известных площадках Москвы, как ВДНХ, Сокольнический выставочный центр, Тишинская площадь, Арбат и торговые центры.   </p>
+                           <p>Выставочная компания  «ПроЭкспо» начала свою деятельность в 2007 г. За более чем 15 лет работы компания проделала стремительный путь развития. Коллектив  приобрёл практический опыт организации выставочно-ярмарочных мероприятий, в том числе и международного уровня.
+                           </p>
+                           <p>Мы успешно работали на таких известных площадках Москвы, как ВДНХ, Сокольнический выставочный центр, Тишинская площадь дом 1, «Шоу-рум уникальных вещей» на Старом Арбате и в различных торговых центрах.</p>
                        </div>
-                       <button>Наши выставки</button>
                    </div>
                </div>
             </section>
@@ -69,14 +71,14 @@ const AboutUs:NextPage<Props> = (props) => {
                         spaceBetween={50}
                         modules={[Navigation, Autoplay]}
                         className={style.mainPastEventsContainerSwiper}>
-                        {pastEvent.map((item, index)=>{
+                        {props.banners.nameBanners.map((item)=>{
                             return(
                                 <SwiperSlide
                                     key={uuidv4()}
                                     className={style.mainPastEventsContainerSwiperSlide}
                                 >
                                     <Image
-                                        src={`/images/pastEvent/${item.nameFile}`}
+                                        src={`/images/pastEvent/${item}`}
                                         alt={'Здоровье EXPO'}
                                         width={500}
                                         height={250}

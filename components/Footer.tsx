@@ -22,7 +22,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link href={'/about-expo'}>
-                                    О выставке
+                                    Культурная программа
                                 </Link>
                             </li>
                             <li>
@@ -31,13 +31,8 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/about_us'}>
+                                <Link href={'/members'}>
                                     Участникам
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={'/about_us'}>
-                                    Культурная программа
                                 </Link>
                             </li>
                             <li>

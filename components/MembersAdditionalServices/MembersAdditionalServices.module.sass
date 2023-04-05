@@ -1,0 +1,62 @@
+@import '../../styles/mixin'
+
+.services
+  margin: 0 auto
+  padding: calcWidth1920(50) 0 calcWidth1920(50)
+  width: calcWidth1920(1600)
+  h2
+    color: #5b8b27
+    font-family: Tenor,sans-serif
+    font-size: calcWidth1920(55)
+  &Container
+    grid-template-columns: 1fr 1fr
+    margin-top: calcWidth1920(100)
+    display: grid
+    justify-items: center
+    gap: calcWidth1920(30)
+    &List
+      grid-column: 1/2
+      grid-row: 1/2
+      font-size: calcWidth1920(22)
+      color: #093719
+      font-family: Noto Medium,sans-serif
+      font-weight: 500
+      display: flex
+      flex-direction: column
+      gap: calcWidth1920(20)
+      li
+        list-style-type:  "\1F331"
+    &Decor
+      grid-row: 1/2
+      grid-column: 2/3
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      width: 100%
+      height: calcWidth1920(400)
+      &Image
+        position: absolute
+        width: calcWidth1920(300)
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          max-width: 100%
+          height: auto
+        &:first-child
+          transform: translate(-50%, 0)
+          top: 0
+          left: 50%
+        &:nth-child(2)
+          transform: translate(0, -50%)
+          left: 0
+          top: 50%
+        &:nth-child(3)
+          transform: translate(-50%, 0)
+          bottom: 0
+          left: 50%
+        &:nth-child(4)
+          transform: translate(0, -50%)
+          top: 50%
+          right: 0

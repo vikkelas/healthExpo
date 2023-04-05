@@ -1,0 +1,70 @@
+@import '../../styles/mixin'
+
+.speak
+  width: 100%
+  display: grid
+  grid-template-columns: 55% 45%
+  height: 100%
+  &List
+    background-color: #5b8b27
+    display: grid
+    grid-template-columns: repeat(2, calcWidth1920(270))
+    gap: calcWidth1920(35) calcWidth1920(50)
+    align-content: center
+    justify-content: center
+    align-items: center
+    justify-items: center
+    &Item
+      display: grid
+      grid-template-rows: 1fr 1fr
+      gap: calcWidth1920(30)
+      justify-items: center
+      color: #FFF
+      font-family: "Noto Light", sans-serif
+      font-size: calcWidth1920(30)
+      line-height: calcWidth1920(40)
+      span
+        text-align: center
+      &Img
+        width: calcWidth1920(100)
+        height: calcWidth1920(100)
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          width: 100%
+          height: auto
+
+  &Info
+    width: 100%
+    padding: calcWidth1920(50) calcWidth1920(120)
+    display: flex
+    flex-direction: column
+    gap: calcWidth1920(40)
+    &Title
+      color: #093719
+      font-family: Tenor,sans-serif
+      font-size: calcWidth1920(60)
+      line-height: calcWidth1920(65)
+      display: flex
+      flex-direction: column
+      gap: calcWidth1920(20)
+      span
+        display: block
+        width: calcWidth1920(480)
+        height: calcWidth1920(3)
+        background-color: #093719
+    p
+      font-family: Noto,sans-serif
+      font-size: calcWidth1920(25)
+    &Img
+      align-self: center
+      width: calcWidth1920(280)
+      height: calcWidth1920(280)
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 100%
+        height: auto
+

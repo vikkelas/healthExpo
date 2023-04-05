@@ -18,7 +18,7 @@ const ForParticipants = () => {
                         <span/>
                     </div>
                     <div className={style.participantsContainerContentMain}>
-                        <p>Цель проекта - создать регулярную выставочную площадку, где предприниматели смогут:</p>
+                        <p>На выставке «Здоровье-EXPO» производители, представители торговли и спикеры смогут:</p>
                         <ul>
                             <li>представить свою продукцию</li>
                             <li>выйти на новые продажи</li>
@@ -26,7 +26,13 @@ const ForParticipants = () => {
                             <li>привлечь дополнительное внимание к компании</li>
                             <li>повысить свой авторитет на рынке</li>
                         </ul>
+                        <p>Размещение информации о товарах и услугах участников в соцсетях <strong>бесплатно</strong>.</p>
                     </div>
+                    <motion.button
+                        initial={{scale: 1}}
+                        whileHover={{scale: 1.04}}
+                        whileTap={{scale: 0.9}}
+                    >Участвовать</motion.button>
                     <div className={style.participantsContainerContentImg}>
                         <Image
                             alt={'Участники Здоровья EXPO'}
@@ -35,11 +41,6 @@ const ForParticipants = () => {
                             height={489}
                         />
                     </div>
-                    <motion.button
-                        initial={{scale: 1}}
-                        whileHover={{scale: 1.04}}
-                        whileTap={{scale: 0.9}}
-                    >Участвовать</motion.button>
                 </div>
                 <div className={style.participantsContainerContent}>
                     <div className={style.participantsContainerContentImg}>
@@ -57,13 +58,19 @@ const ForParticipants = () => {
                     <div className={style.participantsContainerContentMain}>
                         <ul>
                             <li>продажа товаров и услуг для здорового образа жизни</li>
-                            <li> презентация продукции фирмами-производителями</li>
+                            <li>презентация продукции фирмами-производителями</li>
                             <li>встречи с авторами методик оздоровления</li>
-                            <li>выступления с семинарами и презентациями спикеров, психолого, мануальщиков</li>
-                            <li>выступления священнослужителей, профессоров</li>
+                            <li>знакомство с разными техниками массажей</li>
+                            <li>Выступления с семинарами и презентациями спикеров, психологов, мануальщиков</li>
+                            <li>выступления священнослужителей</li>
                             <li>розыгрыши призов</li>
                         </ul>
                     </div>
+                    <motion.button
+                        initial={{scale: 1}}
+                        whileHover={{scale: 1.04}}
+                        whileTap={{scale: 0.9}}
+                    >Получить приглашение</motion.button>
                 </div>
             </div>
             <span className={style.participantsDecorFooter}>expo</span>

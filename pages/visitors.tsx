@@ -1,7 +1,12 @@
 import style from '../styles/Visitors.module.sass';
 import Image from "next/image";
+import {v4 as uuidv4} from "uuid";
+import data from "@/data/data";
+import MembersAdditionalServices from "@/components/MembersAdditionalServices/MembersAdditionalServices";
+import {motion} from "framer-motion";
 
 const Visitors = () => {
+    const {aboutExpo} = data
     return (
         <main className={style.visitors}>
             <section className={style.visitorsTitle}>
@@ -18,85 +23,51 @@ const Visitors = () => {
                         <h1>Посетителям</h1>
                         <div className={style.visitorsTitleContainerContentMain}>
                             <div className={style.visitorsTitleContainerContentMainText}>
-                                <h2>Чем будет полезна выставка</h2>
+                                <h2>Что вы увидите на выставке </h2>
                                 <p>На выставке примут участие фирмы-производители и официальные представители из разных стран. Будут представлены товары и услуги для здорового образа жизни:
                                 </p>
                                 <ul>
-                                    <li>продукты для здорового питания, </li>
-                                    <li>натуральные лекарственные средства, БАДы,</li>
-                                    <li>гомеопатия,</li>
-                                    <li>натуральная косметика, </li>
-                                    <li>одежда из натуральных тканей,</li>
-                                    <li>товары для здоровья детей,</li>
-                                    <li>ортопедические изделия,</li>
-                                    <li>медтехника для использования в домашних условиях,</li>
-                                    <li>средства традиционной восточной медицины, </li>
-                                    <li>техники различных массажей, </li>
-                                    <li>технические средства для ухода за собой</li>
-                                    <li>и прочая продукция для укрепления здоровья.</li>
+                                    <li>Натуральные лекарственные препараты, гомеопатия, БАДы.</li>
+                                    <li>Технологии сохранения красоты и здоровья без лекарств.</li>
+                                    <li>Системы здорового питания, особые продукты и рецепты.</li>
+                                    <li>Товары и  услуги для здорового образа жизни.</li>
+                                    <li>Оздоровительные центры и санаторно-курортное лечение.</li>
+                                    <li>Натуральная косметика и средства гигиены.</li>
+                                    <li>Восточная медицина, различные техники массажа.</li>
+                                    <li>Изделия и одежда из натуральных материалов.</li>
+                                    <li>Центры эстетической медицины и спа.</li>
+                                    <li>Медицинские приборы для использования дома, ортопедия.</li>
+                                    <li>Органические и био-продукты питания.</li>
+                                    <li>Товары для здоровья детей.</li>
                                 </ul>
                             </div>
-                            <div className={style.visitorsTitleContainerContentMainDecor}>
-                                <div className={style.visitorsTitleContainerContentMainDecorImg}>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className={style.visitorsThem}>
+                <h2>Тематические разделы выставки:</h2>
+                <div className={style.visitorsThemList}>
+                    {aboutExpo.map(item=>{
+                        return(
+                            <div
+                                key={uuidv4()}
+                                className={style.visitorsThemListItem}>
+                                <div className={style.visitorsThemListItemImg}>
                                     <Image
-                                        src={'/images/flags.webp'}
-                                        alt={'Производители разных стран'}
-                                        width={600}
-                                        height={400}
+                                        src={`/images/icons-about-expo/${item.iconName}`}
+                                        alt={'icon'}
+                                        width={100}
+                                        height={100}
                                     />
                                 </div>
+                                <span>{item.title}</span>
                             </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
             </section>
-            <section className={style.visitorsProgram}>
-                <h2>А также в программе выставки: </h2>
-                <div className={style.visitorsProgramContainer}>
-                    <ul className={style.visitorsProgramContainerList}>
-                        <li>презентации продукции фирмами–производителями, </li>
-                        <li>встречи с авторами методик оздоровления, </li>
-                        <li>демонстрация упражнений естественного оздоровления, </li>
-                        <li>розыгрыши призов.</li>
-                    </ul>
-                    <button className={style.visitorsProgramContainerBtn}>Посетить</button>
-                    <div className={style.visitorsProgramContainerDecor}>
-                        <div className={style.visitorsProgramContainerDecorImage}>
-                            <Image
-                                src={'/images/visitors/1.webp'}
-                                alt={'для посетителей'}
-                                width={400}
-                                height={300}
-                            />
-                        </div>
-                        <div className={style.visitorsProgramContainerDecorImage}>
-                            <Image
-                                src={'/images/visitors/2.webp'}
-                                alt={'для посетителей'}
-                                width={400}
-                                height={300}
-                            />
-                        </div>
-                        <div className={style.visitorsProgramContainerDecorImage}>
-                            <Image
-                                src={'/images/visitors/3.webp'}
-                                alt={'для посетителей'}
-                                width={400}
-                                height={300}
-                            />
-                        </div>
-                        <div className={style.visitorsProgramContainerDecorImage}>
-                            <Image
-                                src={'/images/visitors/4.webp'}
-                                alt={'для посетителей'}
-                                width={400}
-                                height={300}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-            </section>
+            <MembersAdditionalServices info={data.membersInfo[0]}/>
             <section className={style.visitorsSale}>
                 <div className={style.visitorsSaleContainer}>
                     <h2>Акция «Уход за здоровьем»</h2>
@@ -112,7 +83,6 @@ const Visitors = () => {
                         <div className={style.visitorsSaleContainerContentText}>
                             <p>В рамках выставки состоится акция «Уход за здоровьем», в ходе которой посетители смогут пройти бесплатную диагностику состояния организма, получить консультации по профилактике заболеваний, основам правильного питания, навыкам двигательной активности.
                             </p>
-                            <button>Посетить</button>
                             <div className={style.visitorsSaleContainerContentTextIcon}>
                                 <Image
                                     src={'/images/visitors/listMed.png'}
@@ -130,7 +100,7 @@ const Visitors = () => {
                     <h2>Выступления спикеров</h2>
                     <div className={style.visitorsSpacerContainerContent}>
                         <div className={style.visitorsSpacerContainerContentText}>
-                            <h3>А также вы сможете посетить лекции:</h3>
+                            <h3>В программе мероприятий выставки вы найдёте лекции, мастер-классы и презентации ведущих специалистов в области медицины</h3>
                             <ul>
                                 <li>о сохранении здоровья, </li>
                                 <li>правильном питании,</li>
@@ -152,7 +122,11 @@ const Visitors = () => {
                                     height={150}
                                 />
                             </div>
-                            <button>Посетить</button>
+                            <motion.button
+                                initial={{scale: 1}}
+                                whileHover={{scale: 1.04}}
+                                whileTap={{scale: 0.9}}
+                            >Получить приглашение</motion.button>
                         </div>
                         <div className={style.visitorsSpacerContainerContentImage}>
                             <Image

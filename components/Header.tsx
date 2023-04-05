@@ -43,7 +43,7 @@ const Header = () => {
                             initial={{color:'#093719'}}
                             animate={activePage==='about-expo'?{color: '#5B8B27'}:{color:'#093719'}}
                             className={style.headerContainerNavListItem}>
-                            <Link href={'/about-expo'}>О выставке</Link>
+                            <Link href={'/about-expo'}>Культурная программа</Link>
                         </motion.li>
                         <motion.li
                             initial={{color:'#093719'}}
@@ -53,9 +53,9 @@ const Header = () => {
                         </motion.li>
                         <motion.li
                             initial={{color:'#093719'}}
-                            animate={activePage==='about_us'?{color: '#5B8B27'}:{color:'#093719'}}
+                            animate={activePage==='members'?{color: '#5B8B27'}:{color:'#093719'}}
                             className={style.headerContainerNavListItem}>
-                            <Link href={'/about_us'}>Участникам</Link>
+                            <Link href={'/members'}>Участникам</Link>
                         </motion.li>
                         <motion.li
                             initial={{color:'#093719'}}

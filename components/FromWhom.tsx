@@ -1,36 +1,24 @@
 import Image from "next/image";
-import data, {DataFile} from "../data/data";
-import { v4 as uuidv4 } from 'uuid';
 import style from '../styles/FromWhom.module.sass';
 
 const FromWhom = () => {
-    const dataFile:DataFile = data;
     return (
         <section className={style.fromWhom}>
             <div className={style.fromWhomContainer}>
                 <div className={style.fromWhomContainerTitle}>
-                    <h2>Для кого</h2>
-                    <p>Она будет интересна как специалистам в области медицины, фармакологии, косметологии, так и посетителям, неравнодушным к своему здоровью и красоте.</p>
+                    <h2>Выставка «Здоровье-EXPO» собирает в одном месте лучших представителей традиционной и нетрадиционной медицины.</h2>
                 </div>
-                <ul className={style.fromWhomContainerList}>
-                    {dataFile.fromWhom.map(item=>{
-                        return (
-                            <li
-                                className={style.fromWhomContainerListItem}
-                                key={uuidv4()}>
-                                <div className={style.fromWhomContainerListItemIcon}>
-                                    <Image
-                                        width={125}
-                                        height={125}
-                                        src={item.imgUrl}
-                                        alt={item.alt}
-                                    />
-                                </div>
-                                <p>{item.title}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
+                <div className={style.fromWhomContainerInfo}>
+                    <h3>Здесь вы узнаете:</h3>
+                    <ul className={style.fromWhomContainerInfoList}>
+                        <li>о различных методах лечения</li>
+                        <li>профилактике заболеваний</li>
+                        <li>классических и необычных техниках массажей</li>
+                        <li>здоровом образе жизни</li>
+                        <li>правильном питании</li>
+                        <li>рефлексо- и фитотерапии</li>
+                    </ul>
+                </div>
             </div>
             <div className={style.fromWhomImgDecor}>
                 <Image

@@ -1,0 +1,69 @@
+@import '../../styles/mixin'
+
+.schema
+  background-color: #5b8b27
+  padding: calcWidth1920(150) 0
+  &Container
+    width: calcWidth1920(1600)
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    gap: calcWidth1920(100)
+    h1
+      color: #FFFFFF
+      font-family: Tenor,sans-serif
+      font-size: calcWidth1920(70)
+    p
+      font-family: Noto, sans-serif
+      font-size: calcWidth1920(40)
+      max-width: calcWidth1920(980)
+      padding: calcWidth1920(25)
+      border-radius: calcWidth1920(25)
+      line-height: calcWidth1920(50)
+      background-color: #FCF7CE
+    &List
+      width: 100%
+      display: flex
+      justify-content: space-between
+      &Item
+        cursor: pointer
+        width: calcWidth1920(260)
+        height: calcWidth1920(260)
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: transform 0.4s ease-in-out
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+        &:hover
+          transform: scale(1.1)
+
+.bigPhoto
+  width: 100%
+  height: 100%
+  position: relative
+  &Close
+    cursor: pointer
+    width: calcWidth1920(40)
+    height: calcWidth1920(40)
+    background-color: #FFFFFF
+    position: absolute
+    top: 0
+    right: 0
+    margin: calcWidth1920(40)
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: calcWidth1920(40)
+    padding: calcWidth1920(10)
+    img
+      width: 100%
+      height: auto
+  &Img
+    width: calcWidth1920(600)
+    img
+      width: 100%
+      height: auto
+

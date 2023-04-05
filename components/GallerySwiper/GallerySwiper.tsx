@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import style from "./GallerySwiper.module.sass";
 import Image from "next/image";
 import {v4 as uuidv4} from "uuid";
-import SwiperCore, { FreeMode, Navigation, Thumbs, Controller } from "swiper";
+import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
 import SwiperClass from "swiper/types/swiper-class";
 import {NextPage} from "next";
 import {Swiper, SwiperSlide } from "swiper/react";

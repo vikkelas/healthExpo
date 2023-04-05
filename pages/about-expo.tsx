@@ -1,10 +1,9 @@
 import style from '../styles/aboutExpo.module.sass'
 import Image from "next/image";
-import data from "@/data/data";
-import {v4 as uuidv4} from 'uuid';
-
+import {motion} from "framer-motion";
+import Link from "next/link";
 const AboutExpo = () => {
-    const {aboutExpo} = data
+
     return (
         <main className={style.main}>
             <section className={style.mainTitle}>
@@ -17,46 +16,61 @@ const AboutExpo = () => {
                     />
                 </div>
                 <div className={style.mainTitleContent}>
-                    <h1>О выставке</h1>
+                    <h1>Культурная программа</h1>
                     <div className={style.mainTitleContentBox}>
                         <span>
-                            Выставка «Здоровье-EXPO» собирает в одном месте лучших представителей традиционной и нетрадиционной медицины.
+                            В программе мероприятий выставки вы найдёте лекции, мастер-классы и презентации ведущих специалистов в области медицины
                         </span>
-                        <h2>Здесь вы узнаете о:</h2>
                         <ul>
-                            <li>различных методах лечения,</li>
-                            <li>профилактике заболеваний</li>
-                            <li>классических и необычных техниках массажей,</li>
-                            <li>здоровом образе жизни,</li>
-                            <li>правильном питании,</li>
-                            <li>рефлексо- и фитотерапии.</li>
+                            <li>о сохранении здоровья</li>
+                            <li>правильном питании</li>
+                            <li>фитотерапии</li>
+                            <li>рефлексотерапии</li>
+                            <li>гирудотерапии</li>
+                            <li>различных видах массажей</li>
+                            <li>инновационных способах лечения</li>
+                            <li>нутрициологии</li>
+                            <li>диетологии</li>
+                            <li>а также выступления популярных фитнес-тренеров и других спикеров, экспертов ЗОЖ</li>
                         </ul>
                     </div>
                 </div>
-
             </section>
-            <section className={style.mainThem}>
-                <h2>Тематические разделы выставки:</h2>
-                <div className={style.mainThemList}>
-                    {aboutExpo.map(item=>{
-                        return(
-                            <div
-                                key={uuidv4()}
-                                className={style.mainThemListItem}>
-                                <div className={style.mainThemListItemImg}>
-                                    <Image
-                                        src={`/images/icons-about-expo/${item.iconName}`}
-                                        alt={'icon'}
-                                        width={100}
-                                        height={100}
-                                    />
-                                </div>
-                                <span>{item.title}</span>
+            <section className={style.mainSale}>
+                <div className={style.mainSaleContainer}>
+                    <h2>Акция «Уход за здоровьем»</h2>
+                    <div className={style.mainSaleContainerContent}>
+                        <div className={style.mainSaleContainerContentImage}>
+                            <Image
+                                src={'/images/visitors/6.webp'}
+                                alt={'Акция проверь здоровье'}
+                                width={600}
+                                height={700}
+                            />
+                        </div>
+                        <div className={style.mainSaleContainerContentText}>
+                            <p>В рамках выставки состоится акция «Уход за здоровьем», в ходе которой посетители смогут пройти бесплатную диагностику состояния организма, получить консультации по профилактике заболеваний, основам правильного питания, навыкам двигательной активности.
+                            </p>
+                            <motion.button
+                                initial={{scale: 1}}
+                                whileHover={{scale: 1.04}}
+                                whileTap={{scale: 0.9}}
+                            >
+                                <Link href={'/visitors'}>
+                                    Посетить
+                                </Link>
+                            </motion.button>
+                            <div className={style.mainSaleContainerContentTextIcon}>
+                                <Image
+                                    src={'/images/visitors/listMed.png'}
+                                    alt={'список'}
+                                    width={150}
+                                    height={150}
+                                />
                             </div>
-                        )
-                    })}
+                        </div>
+                    </div>
                 </div>
-                <button className={style.mainThemBtn}>Посетить выставку</button>
             </section>
         </main>
     );

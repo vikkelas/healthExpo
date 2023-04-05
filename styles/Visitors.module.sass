@@ -83,82 +83,57 @@
               img
                 width: 100%
                 height: auto
-  &Program
-    padding: calcWidth1920(50) 0 calcWidth1920(50)
+  &Them
+    display: flex
+    flex-direction: column
     width: calcWidth1920(1600)
     margin: 0 auto
     h2
-      color: #5b8b27
       font-family: Tenor,sans-serif
-      font-size: calcWidth1920(55)
-    &Container
-      margin-top: calcWidth1920(100)
+      font-size: calcWidth1920(70)
+      line-height: calcWidth1920(80)
+      max-width: calcWidth1920(900)
+      color: #5b8b27
+    &List
+      padding: calcWidth1920(60) 0
       display: grid
-      grid-template-columns: 1fr 1fr
-      justify-items: center
-      gap: calcWidth1920(30)
-      &List
-        grid-column: 1/2
-        grid-row: 1/2
-        font-size: calcWidth1920(22)
-        color: #093719
-        font-family: Noto Medium,sans-serif
-        font-weight: 500
-        display: flex
-        flex-direction: column
-        gap: calcWidth1920(20)
-        li
-          list-style-type:  "\1F331"
-      &Decor
-        grid-row: 1/2
-        grid-column: 2/3
+      grid-template-columns: repeat(3, 1fr)
+      gap: calcWidth1920(20)
+      &Item
+        padding: calcWidth1920(20)
+        background-color: #5b8b27
+        border-radius: calcWidth1920(70)
         display: flex
         align-items: center
-        justify-content: center
-        position: relative
-        width: 100%
-        height: calcWidth1920(400)
-        &Image
-          position: absolute
-          width: calcWidth1920(300)
+        justify-content: flex-start
+        gap: calcWidth1920(20)
+        span
+          color: #FFFFFF
+          text-align: left
+          font-family: Noto, sans-serif
+          font-size: calcWidth1920(20)
+        &Img
+          width: calcWidth1920(60)
+          height: calcWidth1920(60)
           display: flex
           justify-content: center
           align-items: center
           img
-            max-width: 100%
+            width: 100%
             height: auto
-          &:first-child
-            transform: translate(-50%, 0)
-            top: 0
-            left: 50%
-          &:nth-child(2)
-            transform: translate(0, -50%)
-            left: 0
-            top: 50%
-          &:nth-child(3)
-            transform: translate(-50%, 0)
-            bottom: 0
-            left: 50%
-          &:nth-child(4)
-            transform: translate(0, -50%)
-            top: 50%
-            right: 0
-      &Btn
-        cursor: pointer
-        letter-spacing: calcWidth1920(2)
-        padding: calcWidth1920(20) calcWidth1920(80)
-        border-radius: calcWidth1920(50)
-        border: none
-        font-family: Tenor, sans-serif
-        font-weight: 700
-        align-self: flex-start
-        grid-column: 1/2
-        font-size: calcWidth1920(22)
-        background-color: #5b8b27
-        color: #FFFFFF
-        box-shadow: 0 0 calcWidth1920(24) calcWidth1920(6) rgb(168, 224, 115)
+    &Btn
+      border-radius: calcWidth1920(40)
+      font-family: Roboto,sans-serif
+      align-self: center
+      max-width: 100%
+      font-size: calcWidth1920(26)
+      padding: calcWidth1920(20) calcWidth1920(40)
+      color: #5b8b27
+      border: 1px solid #5b8b27
+      background-color: #FFFFFF
+      box-shadow: 0 0 calcWidth1920(16) calcWidth1920(2) rgba(87, 161, 24, 0.82)
   &Sale
-    padding: calcWidth1920(150) 0
+    padding: calcWidth1920(60) 0
     background: linear-gradient(to top, #FCF7CE 0%, #FFFFFF 100%)
     &Container
       width: calcWidth1920(1600)
@@ -222,7 +197,7 @@
 
   &Spacer
     background: linear-gradient(to top, #ffffff 0%, #FCF7CE 100%)
-    padding: calcWidth1920(100) 0
+    padding: calcWidth1920(60) 0
     &Container
       width: calcWidth1920(1600)
       margin: 0 auto
