@@ -19,19 +19,19 @@ const PavilionInfo = () => {
                     transition={{delay: 0.6, duration: 0.6,}}
                     className={style.pavilionInfoHeaderInfo}>
                     <div className={style.pavilionInfoHeaderInfoTitle}>
-                        <h2>Выставочный павильон 55 ВДНХ</h2>
+                        <h2>Экспоцентр Москва</h2>
                         <span/>
                     </div>
                     <div className={style.pavilionInfoHeaderInfoContent}>
                         <p className={style.pavilionInfoHeaderInfoContentFirst}>1 этаж</p>
-                        <p className={style.pavilionInfoHeaderInfoContentAny}>Общая площадь: <span>2250 м</span></p>
-                        <p className={style.pavilionInfoHeaderInfoContentAny}>Высота потолков: <span>10 м</span></p>
+                        <p className={style.pavilionInfoHeaderInfoContentAny}>Общая площадь: <span>1114 м</span></p>
+                        <p className={style.pavilionInfoHeaderInfoContentAny}>Высота потолков: <span>5 м</span></p>
                     </div>
                 </motion.div>
                 <div className={style.pavilionInfoHeaderImage}>
                     <Image
-                        src={'/images/pavilionInfo.webp'}
-                        alt={'Проведение выставки Здоровье-EXPO на ВДНХ'}
+                        src={'/images/pavilion.jpg'}
+                        alt={'Проведение выставки Здоровье-EXPO'}
                         width={1200}
                         height={850}
                     />
@@ -51,18 +51,6 @@ const PavilionInfo = () => {
             </div>
             <PavilionInfoList data={data.pavilionInfo}/>
             <PavilionGallery/>
-            <section className={style.pavilionInfoPavilion}>
-                <span className={style.pavilionInfoPavilionDecor}/>
-                <div className={style.pavilionInfoPavilionImg}>
-                    <Image
-                        width={800}
-                        height={600}
-                        alt={'Expo'}
-                        src={'/images/pavilion.png'}
-                    />
-                </div>
-                <span className={style.pavilionInfoPavilionExpo}>EXPO</span>
-            </section>
         </section>
     );
 };

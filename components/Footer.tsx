@@ -16,6 +16,11 @@ const Footer = () => {
                     <nav className={style.footerContainerHeaderMenu}>
                         <ul>
                             <li>
+                                <Link href={'/'}>
+                                    Главная
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href={'/about-us'}>
                                     О компании
                                 </Link>
@@ -40,13 +45,26 @@ const Footer = () => {
                                     Контакты
                                 </Link>
                             </li>
+                            <li>
+                                <Link href={'/contacts'}>
+                                    Наши партнеры
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
+                    <div className={style.footerContainerHeaderSecLogo}>
+                        <Image
+                           width={200}
+                           height={200}
+                           alt={'проэкспо'}
+                           src={'/images/proexpologo.jpg'}
+                        />
+                    </div>
                     <div className={style.footerContainerHeaderSocial}>
                         <Link
                             target="_blank"
                             className={style.footerContainerHeaderSocialLink}
-                            href={'https://vk.ru'}>
+                            href={'https://vk.com/festivalyarmarka'}>
                             <div className={style.footerContainerHeaderSocialLinkIcon}>
                                 <Image
                                     src={'/images/vk.png'}
@@ -60,7 +78,7 @@ const Footer = () => {
                         <Link
                             target="_blank"
                             className={style.footerContainerHeaderSocialLink}
-                            href={'https://wa.me/'}>
+                            href={'https://wa.me/79260501033'}>
                             <div className={style.footerContainerHeaderSocialLinkIcon}>
                                 <Image
                                     src={'/images/whatsapp.png'}
@@ -73,11 +91,9 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-                <p className={style.footerContainerMain}>
-                    На Здоровье-EXPO будет проводиться фото и видео съёмка для публикации материалов на сайте и в социальных сетях выставки. Посещая мероприятие, Вы автоматически даёте свое согласие на произведение фото и видеосъемки организаторами выставки при ее проведении, обработку полученных материалов, а также публикацию таких фото и видеоматериалов в указанных целях
-                </p>
+
                 <div className={style.footerContainerFooter}>
-                    <p>© 2023 Здоровье-EXPO 10–18 мая 2023</p>
+                    <p>© 2023 Здоровье-EXPO 15–17 июня 2023</p>
                     <p>Выставочная компания ООО «ЮРБРУС» 2007-2023</p>
                 </div>
             </div>

@@ -106,18 +106,8 @@ const data:DataFile = {
   pavilionInfo: [
     {
       title: 'Выставочный зал',
-      area: 2100,
+      area: 1114,
       humans: 700
-    },
-    {
-      title: 'Лекционный класс',
-      area: 72,
-      humans: 60
-    },
-    {
-      title: 'Переговорная комната',
-      area: 69,
-      humans: 20
     }
   ],
   pastEvent: [

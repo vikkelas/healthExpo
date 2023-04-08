@@ -50,20 +50,6 @@ const PavilionGallery = () => {
                         width={400}
                         height={300}/>
                 </SwiperSlide>
-                <SwiperSlide className={style.containerSwiperSlider}>
-                    <Image
-                        src={'/images/carousel/9.jpg'}
-                        alt={'Павильон ВДНХ'}
-                        width={400}
-                        height={300}/>
-                </SwiperSlide>
-                <SwiperSlide className={style.containerSwiperSlider}>
-                    <Image
-                        src={'/images/carousel/10.jpg'}
-                        alt={'Павильон ВДНХ'}
-                        width={400}
-                        height={300}/>
-                </SwiperSlide>
             </Swiper>
         </div>
     );

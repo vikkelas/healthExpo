@@ -23,7 +23,7 @@ export default function Home() {
           <ForParticipants/>
           <PavilionInfo/>
           <Advertising/>
-          <HowToGetTo/>
+          <HowToGetTo title={'Место проведения'}/>
       </main>
     </>
   )

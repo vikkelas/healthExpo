@@ -30,7 +30,7 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
             <h2>Принять участие</h2>
             <div className={style.formWindowBox}>
                 <a
-                    href={'https://api.whatsapp.com/'}
+                    href={'https://wa.me/79260501033'}
                     className={style.formWindowBoxSocial}>
                     <div className={style.formWindowBoxSocialIcon}>
                         <Image
@@ -43,7 +43,7 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
                     <span>WhatsApp</span>
                 </a>
                 <a
-                    href={'https://vk.ru/'}
+                    href={'https://vk.com/festivalyarmarka'}
                     className={style.formWindowBoxSocial}>
                     <div className={style.formWindowBoxSocialIcon}>
                         <Image

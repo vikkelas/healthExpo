@@ -1,0 +1,23 @@
+@import 'mixin'
+
+.contacts
+  &Schema
+    width: calcWidth1920(1600)
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: calcWidth1920(30)
+    padding: calcWidth1920(30) 0
+    h2
+      display: block
+      align-self: flex-start
+      font-family: Tenor, sans-serif
+      font-size: calcWidth1920(60)
+      color: #093719
+      border-bottom: calcWidth1920(4) solid #093719
+    &Item
+      width: calcWidth1920(900)
+      img
+        width: 100%
+        height: auto
