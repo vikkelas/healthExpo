@@ -5,7 +5,10 @@ import {useRouter} from "next/router";
 import React, {useCallback, useEffect, useState} from "react";
 import {motion} from 'framer-motion';
 import Banner from "@/components/Banner/Banner";
+import * as Scroll from 'react-scroll';
+
 const Header = () => {
+    const ScrollLink = Scroll.Link
     const [bannerStatus, setBannerStatus] = useState<boolean>(true)
     const [activePage, setActivePage] = useState<string>('')
     const router = useRouter();
@@ -16,8 +19,20 @@ const Header = () => {
         changeActivePage()
     },[changeActivePage])
     return (
-        <header className={style.header}>
+        <header id={'header'} className={style.header}>
             {bannerStatus&&<Banner setBanner={setBannerStatus}/>}
+            <ScrollLink to="header" >
+                <motion.div
+                    initial={{scale: 1}}
+                    animate={{scale: 1.1}}
+                    transition={{duration: 1, repeatType: 'reverse', repeat: Infinity}}
+                    className={style.headerArrowUp}>
+                    <svg width="30" height="97" viewBox="0 0 30 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 0L0.566243 25L29.4338 25L15 0ZM17.5 96.5L17.5 22.5H12.5L12.5 96.5H17.5Z" fill="white"/>
+                    </svg>
+                </motion.div>
+            </ScrollLink>
+
             <div className={style.headerContainer}>
                 <Link
                     href={'/'}

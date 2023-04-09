@@ -58,6 +58,8 @@ const GallerySwiper:NextPage<PropsGallery> = (props) => {
                                 onClick={()=>setOpenModalSlider(true)}
                             >
                                 <Image
+                                    priority
+                                    quality={70}
                                     src={`/images/gallery/${item}`}
                                     alt={'Наши фото'}
                                     width={600}
@@ -117,6 +119,7 @@ const GallerySwiper:NextPage<PropsGallery> = (props) => {
                                 className={style.mainImagesModalSwiperSlide}
                             >
                                 <Image
+                                    quality={70}
                                     src={`/images/gallery/${item}`}
                                     alt={'Здоровье EXPO'}
                                     width={500}

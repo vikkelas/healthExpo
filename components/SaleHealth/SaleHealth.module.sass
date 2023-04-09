@@ -1,0 +1,64 @@
+@import '../../styles/mixin'
+
+.sale
+  padding: calcWidth1920(60) 0
+  background: linear-gradient(to top, #FCF7CE 0%, #FFFFFF 100%)
+  &Container
+    width: calcWidth1920(1600)
+    margin:  0 auto
+    h2
+      text-align: right
+      font-family: Tenor,sans-serif
+      color: #5b8b27
+      font-size: calcWidth1920(55)
+    &Content
+      margin-top: calcWidth1920(50)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: calcWidth1920(30)
+      &Image
+        width: 80%
+        display: flex
+        justify-content: center
+        align-items: center
+        opacity: 0.8
+        img
+          width: 100%
+          height: auto
+          max-height: 100%
+      &Text
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        font-family: Noto,sans-serif
+        p
+          color: #093719
+          font-size: calcWidth1920(20)
+        button
+          cursor: pointer
+          letter-spacing: calcWidth1920(2)
+          padding: calcWidth1920(20) calcWidth1920(80)
+          border-radius: calcWidth1920(50)
+          border: none
+          font-family: Tenor, sans-serif
+          font-weight: 700
+          grid-column: 1/2
+          font-size: calcWidth1920(22)
+          background-color: #5b8b27
+          color: #FFFFFF
+          box-shadow: 0 0 calcWidth1920(24) calcWidth1920(6) rgb(168, 224, 115)
+        &Icon
+          position: absolute
+          bottom: 0
+          right: 0
+          transform: rotateZ(45deg)
+          width: calcWidth1920(150)
+          height: calcWidth1920(150)
+          display: flex
+          justify-content: center
+          align-items: center
+          img
+            height: 100%
+            width: auto

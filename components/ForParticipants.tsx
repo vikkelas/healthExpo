@@ -2,8 +2,11 @@ import React from 'react';
 import style from '../styles/ForParticipants.module.sass';
 import Image from "next/image";
 import {motion} from 'framer-motion'
+import {useDispatch} from "react-redux";
+import {changeModal} from "@/store/reducer/modalSlice";
 
-const ForParticipants:React.FC<{ handleModal:(status: boolean)=>void }> = ({handleModal}) => {
+const ForParticipants = () => {
+    const dispatch = useDispatch()
     return (
         <section className={style.participants}>
             <motion.span
@@ -32,10 +35,10 @@ const ForParticipants:React.FC<{ handleModal:(status: boolean)=>void }> = ({hand
                         <p>Размещение информации о товарах и услугах участников в соцсетях.</p>
                     </div>
                     <motion.button
+                        onClick={()=>dispatch(changeModal(true))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
-                        onClick={()=>handleModal(true)}
                     >Участвовать</motion.button>
                     <div className={style.participantsContainerContentImg}>
                         <Image
@@ -71,10 +74,10 @@ const ForParticipants:React.FC<{ handleModal:(status: boolean)=>void }> = ({hand
                         </ul>
                     </div>
                     <motion.button
+                        onClick={()=>dispatch(changeModal(true))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
-                        onClick={()=>handleModal(true)}
                     >Получить приглашение</motion.button>
                 </div>
             </div>

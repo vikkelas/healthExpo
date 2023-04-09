@@ -1,8 +1,10 @@
 import React, {MouseEventHandler, useState} from 'react';
 import styles from './FormSubscribe.module.sass';
 import formattedPhoneNumber from "@/lib/maskFone";
+import {useDispatch, useSelector} from "react-redux";
+import {changeModal, ModalState} from "@/store/reducer/modalSlice";
 
-const FormSubscribe:React.FC<{handleStatus:(status:boolean)=>void}> = ({handleStatus}) => {
+const FormSubscribe = () => {
     const [formState, setFormState] = useState({
         name: '',
         telephone: '',
@@ -17,10 +19,12 @@ const FormSubscribe:React.FC<{handleStatus:(status:boolean)=>void}> = ({handleSt
         setFormState(prevState => ({...prevState, [e.target.name]:e.target.value}))
     }
 
-    // const sendForm:MouseEventHandler<HTMLButtonElement>  = (e: React.ChangeEvent<HTMLInputElement>)=>{
-    //     e.preventDefault()
-    //     console.log('asdasdad')
-    // }
+    const dispatch = useDispatch()
+
+    const sendForm = (event: React.MouseEvent<HTMLButtonElement>)=>{
+        event.preventDefault()
+        dispatch(changeModal(false))
+    }
     return (
         <div className={styles.formInfo}>
             <h2>Принять участие</h2>
@@ -77,10 +81,7 @@ const FormSubscribe:React.FC<{handleStatus:(status:boolean)=>void}> = ({handleSt
                     </label>
                 </div>
                 <button
-                    onClick={(e)=>{
-                        e.preventDefault()
-                        handleStatus(false)
-                    }}
+                    onClick={sendForm}
                 >
                     Учавствовать
                 </button>

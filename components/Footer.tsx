@@ -83,7 +83,6 @@ const Footer = () => {
                         </Link>
                     </div>
                 </div>
-
                 <div className={style.footerContainerFooter}>
                     <p>© Здоровье-EXPO 15–17 июня 2023</p>
                     <div className={style.footerContainerFooterSecLogo}>

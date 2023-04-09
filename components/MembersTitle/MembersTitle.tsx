@@ -27,7 +27,9 @@ const MembersTitle = () => {
                 </div>
                 <div className={style.membersContainerImage}>
                     <Image
-                        src={'/images/membersTitle.png'}
+                        priority
+                        quality={75}
+                        src={'/images/reklama.jpg'}
                         width={783}
                         height={557}
                         alt={'Посетителям'}

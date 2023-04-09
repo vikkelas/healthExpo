@@ -3,14 +3,17 @@ import style from './MembersServices.module.sass';
 import {v4 as uuidv4} from 'uuid';
 import Image from "next/image";
 import {motion} from "framer-motion";
+import {useDispatch} from "react-redux";
+import {changeModal} from "@/store/reducer/modalSlice";
 
 const MembersServices = () => {
+    const dispatch = useDispatch()
     const textArray = [
         'показ рекламных объявлений о продукции или услуге',
         'размещение информации о вас на сайте и в социальных сетях',
         'проведение мастер-классов и выступлений',
-        'трансляция рекламы во время выставки,',
-        'представить свою продукцию и услуги'
+        'презентация своей продукции и услуг в культурно-деловой программе,',
+        'изготовление баннеров и флаеров для участия на выставке'
     ]
     return (
         <section className={style.services}>
@@ -33,8 +36,8 @@ const MembersServices = () => {
                                 {item}
                             </li>)}
                     </ul>
-                    <p>Размещение информации о товарах и услугах участников в соцсетях <strong>бесплатно!</strong></p>
                     <motion.button
+                        onClick={()=>dispatch(changeModal(true))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
@@ -42,14 +45,14 @@ const MembersServices = () => {
                     >Участвовать!</motion.button>
                 </div>
             </div>
-            <div className={style.servicesDecorDown}>
-                <Image
-                    src={'/images/members/23.png'}
-                    width={400}
-                    height={250}
-                    alt={'decor'}
-                />
-            </div>
+            {/*<div className={style.servicesDecorDown}>*/}
+            {/*    <Image*/}
+            {/*        src={'/images/members/23.png'}*/}
+            {/*        width={400}*/}
+            {/*        height={250}*/}
+            {/*        alt={'decor'}*/}
+            {/*    />*/}
+            {/*</div>*/}
         </section>
     );
 };

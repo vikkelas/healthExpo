@@ -78,10 +78,12 @@ const AboutUs:NextPage<Props> = (props) => {
                                     className={style.mainPastEventsContainerSwiperSlide}
                                 >
                                     <Image
+                                        priority
+                                        quality={70}
                                         src={`/images/pastEvent/${item}`}
                                         alt={'Здоровье EXPO'}
-                                        width={500}
-                                        height={250}
+                                        width={1200}
+                                        height={1200}
                                     />
                                 </SwiperSlide>
                             )

@@ -3,12 +3,15 @@ import style from "./Banner.module.sass";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {NextPage} from "next";
+import {useDispatch} from "react-redux";
+import {changeModal} from "@/store/reducer/modalSlice";
 
 interface PropsBanner {
     setBanner:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Banner:NextPage<PropsBanner> = ({setBanner}) => {
+    const dispatch = useDispatch()
     return (
         <motion.article
             initial={{backgroundColor: 'rgba(202, 241, 165, 0.49)'}}
@@ -56,7 +59,9 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
                     <span>Вконтакте</span>
                 </a>
             </div>
-            <button>Регистрация</button>
+            <button
+                onClick={()=>dispatch(changeModal(true))}
+            >Регистрация</button>
         </motion.article>
     );
 };

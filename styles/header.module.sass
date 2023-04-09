@@ -3,6 +3,25 @@
 .header
   position: relative
   background-color: #FCF7CE
+  &ArrowUp
+    cursor: pointer
+    transform: rotateX(180deg)
+    z-index: 50
+    position: fixed
+    bottom: 0
+    left: 0
+    margin: calcWidth1920(30)
+    border-radius: calcWidth1920(100)
+    padding: calcWidth1920(10)
+    background-color: #093719
+    height: calcWidth1920(60)
+    width: calcWidth1920(60)
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+      height: 100%
+      width: auto
   &Container
     display: flex
     width: calcWidth1920(1600)

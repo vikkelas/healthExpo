@@ -1,15 +1,15 @@
 import style from '../styles/aboutExpo.module.sass'
 import Image from "next/image";
 import {motion} from "framer-motion";
-import Link from "next/link";
-import {useState} from "react";
-import Modal from "@/components/Modal/Modal";
-import FormSubscribe from "@/components/FormSubscribe/FormSubscribe";
+import {changeModal} from "@/store/reducer/modalSlice";
+import {useDispatch} from "react-redux";
+import Speackers from "@/components/Speakers/Speackers";
+import SaleHealth from "@/components/SaleHealth/SaleHealth";
+import MembersAdditionalServices from "@/components/MembersAdditionalServices/MembersAdditionalServices";
+import data from "@/data/data";
 const AboutExpo = () => {
-    const [modalStatus, setModalStatus] = useState(false)
-    const handleModal = (status: boolean)=>{
-        setModalStatus(status)
-    }
+
+    const dispatch = useDispatch()
     return (
         <main className={style.main}>
             <section className={style.mainTitle}>
@@ -42,44 +42,8 @@ const AboutExpo = () => {
                     </div>
                 </div>
             </section>
-            <section className={style.mainSale}>
-                <div className={style.mainSaleContainer}>
-                    <h2>Акция «Уход за здоровьем»</h2>
-                    <div className={style.mainSaleContainerContent}>
-                        <div className={style.mainSaleContainerContentImage}>
-                            <Image
-                                src={'/images/visitors/6.webp'}
-                                alt={'Акция проверь здоровье'}
-                                width={600}
-                                height={700}
-                            />
-                        </div>
-                        <div className={style.mainSaleContainerContentText}>
-                            <p>В рамках выставки состоится акция «Уход за здоровьем», в ходе которой посетители смогут пройти бесплатную диагностику состояния организма, получить консультации по профилактике заболеваний, основам правильного питания, навыкам двигательной активности.
-                            </p>
-                            <motion.button
-                                initial={{scale: 1}}
-                                whileHover={{scale: 1.04}}
-                                whileTap={{scale: 0.9}}
-                                onClick={()=>handleModal(true)}
-                            >
-                                Посетить
-                            </motion.button>
-                            <div className={style.mainSaleContainerContentTextIcon}>
-                                <Image
-                                    src={'/images/visitors/listMed.png'}
-                                    alt={'список'}
-                                    width={150}
-                                    height={150}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <Modal modalStatus={modalStatus} setModalStatus={setModalStatus}>
-                <FormSubscribe handleStatus={handleModal}/>
-            </Modal>
+            <MembersAdditionalServices info={data.membersInfo[0]}/>
+            <Speackers/>
         </main>
     );
 };
