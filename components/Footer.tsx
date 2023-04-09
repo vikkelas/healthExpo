@@ -6,13 +6,13 @@ const Footer = () => {
         <footer className={style.footer}>
             <div className={style.footerContainer}>
                 <div className={style.footerContainerHeader}>
-                    <div className={style.footerContainerHeaderLogo}>
+                    <Link href={'/'} className={style.footerContainerHeaderLogo}>
                         <Image
                             width={200}
                             height={60}
-                            src={'/images/Zdorovie-EXPO 1.png'}
+                            src={'/images/Zdorovie-EXPO 2.png'}
                             alt={'Здоровье EXPO'}/>
-                    </div>
+                    </Link>
                     <nav className={style.footerContainerHeaderMenu}>
                         <ul>
                             <li>

@@ -1,0 +1,63 @@
+@import '../../styles/mixin'
+
+.formInfo
+  width: max-content
+  padding: calcWidth1920(50) calcWidth1920(30)
+  border-radius: calcWidth1920(30)
+  background-color: #FCF7CE
+  display: flex
+  flex-direction: column
+  gap: calcWidth1920(10)
+  color: #093719
+  h2
+    text-align: center
+    font-size: calcWidth1920(28)
+    font-weight: 700
+    color: #093719
+    font-family: Tenor, sans-serif
+  p
+    font-family: Noto,sans-serif
+    text-align: center
+    font-size: calcWidth1920(20)
+    max-width: calcWidth1920(500)
+  &Form
+    display: flex
+    flex-direction: column
+    gap: calcWidth1920(10)
+    label
+      display: flex
+      flex-direction: column
+      span
+        font-size: calcWidth1920(18)
+      input
+        border: none
+        border-radius: calcWidth1920(20)
+        color: #093719
+        padding: calcWidth1920(10) calcWidth1920(20)
+    &Radio
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      span
+        font-size: calcWidth1920(18)
+      label
+        gap: calcWidth1920(20)
+        width: 30%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex-direction: row-reverse
+        input
+          width: calcWidth1920(20)
+          height: calcWidth1920(20)
+    button
+      cursor: pointer
+      align-self: center
+      padding: calcWidth1920(10) calcWidth1920(40)
+      border: none
+      border-radius: calcWidth1920(30)
+      background-color: #5b8b27
+      color: #FFFFFF
+      text-transform: uppercase
+      font-family: Noto,sans-serif
+      box-shadow: 0 0 calcWidth1920(15) #093719

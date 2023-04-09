@@ -1,7 +1,9 @@
 import style from  '../styles/Advertising.module.sass';
 import Image from "next/image";
+import {motion} from "framer-motion";
+import React from "react";
 
-const Advertising = () => {
+const Advertising:React.FC<{ handleModal:(status: boolean)=>void }> = ({handleModal}) => {
     return (
         <section className={style.advertising}>
             <div className={style.advertisingBackground}>
@@ -15,8 +17,20 @@ const Advertising = () => {
             <div className={style.advertisingContent}>
                 <h2>Размещение рекламы</h2>
                 <div className={style.advertisingContentInfo}>
-                    <p>Бесплатное размещение информации о ваших товарах и услугах </p>
-                    <button>Участвовать!</button>
+                    <ul>
+                        <li>Яндекс директ</li>
+                        <li>Таргетированная реклама</li>
+                        <li>Наружная реклама </li>
+                        <li>Флаеры</li>
+                        <li>Тв реклама</li>
+                        <li>В группах, сообществах</li>
+                    </ul>
+                    <motion.button
+                        initial={{scale: 1}}
+                        whileHover={{scale: 1.04}}
+                        whileTap={{scale: 0.9}}
+                        onClick={()=>handleModal(true)}
+                    >Участвовать!</motion.button>
                 </div>
                 <div className={style.advertisingContentIcons}>
                     <div className={style.advertisingContentIconsItem}>
@@ -40,17 +54,6 @@ const Advertising = () => {
                             />
                         </div>
                         <span>Сайты партнеров мероприятия</span>
-                    </div>
-                    <div className={style.advertisingContentIconsItem}>
-                        <div className={style.advertisingContentIconsItemImg}>
-                            <Image
-                                src={'/images/audio-volume-2.png'}
-                                alt={'Здоровье EXPO реклама в соц сетях'}
-                                width={165}
-                                height={165}
-                            />
-                        </div>
-                        <span>Звуковая реклама на территории ВДНХ</span>
                     </div>
                 </div>
             </div>

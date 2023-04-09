@@ -6,8 +6,15 @@ import ForParticipants from "@/components/ForParticipants";
 import PavilionInfo from "@/components/PavilionInfo";
 import HowToGetTo from "@/components/HowToGetTo";
 import Advertising from "@/components/Advertising";
+import FormSubscribe from "@/components/FormSubscribe/FormSubscribe";
+import Modal from "@/components/Modal/Modal";
+import {useState} from "react";
 
 export default function Home() {
+    const [modalStatus, setModalStatus] = useState(false)
+    const handleModal = (status: boolean)=>{
+        setModalStatus(status)
+    }
   return (
     <>
       <Head>
@@ -20,10 +27,13 @@ export default function Home() {
           <MainTitle/>
           <FromWhom/>
           <ThematicSection/>
-          <ForParticipants/>
+          <ForParticipants handleModal={handleModal}/>
           <PavilionInfo/>
-          <Advertising/>
+          <Advertising handleModal={handleModal}/>
           <HowToGetTo title={'Место проведения'}/>
+          <Modal setModalStatus={setModalStatus} modalStatus={modalStatus}>
+              <FormSubscribe handleStatus={handleModal}/>
+          </Modal>
       </main>
     </>
   )
