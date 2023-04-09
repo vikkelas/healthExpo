@@ -10,6 +10,7 @@ import Layout from "@/components/Layout";
 import {YMaps} from "@pbe/react-yandex-maps";
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
       <YMaps query={{
           lang: 'ru_RU',
@@ -19,6 +20,5 @@ export default function App({ Component, pageProps }: AppProps) {
               <Component {...pageProps} />
           </Layout>
       </YMaps>
-      
-      )
+  )
 }

@@ -14,7 +14,16 @@ const MainTitle = () => {
                         height={884}/>
                 </div>
                 <div className={style.mainTitleMainInfo}>
-                    <h2>15-17 июня 2023</h2>
+                    <h2>
+                        <div>
+                            <Image
+                                width={100}
+                                height={100}
+                                src={'/images/proexpologo.jpg'}
+                                alt={'logo'}
+                            />
+                        </div>
+                        15-17 июня 2023</h2>
                     <h1><span>Международная специализированная выставка-продажа</span>Здоровье EXPO</h1>
                     <span className={style.mainTitleMainInfoDecor}/>
                     <div className={style.mainTitleMainInfoLocation}>
@@ -25,7 +34,8 @@ const MainTitle = () => {
                 </div>
             </div>
             <div className={style.mainTitleText}>
-                <p>«Здоровье-EXPO» - место встречи представителей традиционной и нетрадиционной медицины, а также потребителей, которые активно следят за своим здоровьем.
+                <p>
+                    «Здоровье-EXPO» - место встречи представителей традиционной и нетрадиционной медицины, производителей, спикеров, а также потребителей, которые активно следят за своим здоровьем.
                 </p>
                 <br/>
                 <p>

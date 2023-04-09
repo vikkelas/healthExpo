@@ -2,8 +2,14 @@ import style from '../styles/aboutExpo.module.sass'
 import Image from "next/image";
 import {motion} from "framer-motion";
 import Link from "next/link";
+import {useState} from "react";
+import Modal from "@/components/Modal/Modal";
+import FormSubscribe from "@/components/FormSubscribe/FormSubscribe";
 const AboutExpo = () => {
-
+    const [modalStatus, setModalStatus] = useState(false)
+    const handleModal = (status: boolean)=>{
+        setModalStatus(status)
+    }
     return (
         <main className={style.main}>
             <section className={style.mainTitle}>
@@ -55,10 +61,9 @@ const AboutExpo = () => {
                                 initial={{scale: 1}}
                                 whileHover={{scale: 1.04}}
                                 whileTap={{scale: 0.9}}
+                                onClick={()=>handleModal(true)}
                             >
-                                <Link href={'/visitors'}>
-                                    Посетить
-                                </Link>
+                                Посетить
                             </motion.button>
                             <div className={style.mainSaleContainerContentTextIcon}>
                                 <Image
@@ -72,6 +77,9 @@ const AboutExpo = () => {
                     </div>
                 </div>
             </section>
+            <Modal modalStatus={modalStatus} setModalStatus={setModalStatus}>
+                <FormSubscribe handleStatus={handleModal}/>
+            </Modal>
         </main>
     );
 };

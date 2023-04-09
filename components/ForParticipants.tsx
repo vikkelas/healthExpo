@@ -3,7 +3,7 @@ import style from '../styles/ForParticipants.module.sass';
 import Image from "next/image";
 import {motion} from 'framer-motion'
 
-const ForParticipants = () => {
+const ForParticipants:React.FC<{ handleModal:(status: boolean)=>void }> = ({handleModal}) => {
     return (
         <section className={style.participants}>
             <motion.span
@@ -25,6 +25,9 @@ const ForParticipants = () => {
                             <li>расширить сеть деловых контактов</li>
                             <li>привлечь дополнительное внимание к компании</li>
                             <li>повысить свой авторитет на рынке</li>
+                            <li>представить свою продукцию и услуги</li>
+                            <li>заключение контрактов с новыми торговыми сетями и онлайн магазинами.
+                            </li>
                         </ul>
                         <p>Размещение информации о товарах и услугах участников в соцсетях <strong>бесплатно</strong>.</p>
                     </div>
@@ -32,6 +35,7 @@ const ForParticipants = () => {
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
+                        onClick={()=>handleModal(true)}
                     >Участвовать</motion.button>
                     <div className={style.participantsContainerContentImg}>
                         <Image
@@ -70,6 +74,7 @@ const ForParticipants = () => {
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
+                        onClick={()=>handleModal(true)}
                     >Получить приглашение</motion.button>
                 </div>
             </div>
