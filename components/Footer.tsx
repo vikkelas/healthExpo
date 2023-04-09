@@ -52,14 +52,6 @@ const Footer = () => {
                             </li>
                         </ul>
                     </nav>
-                    <div className={style.footerContainerHeaderSecLogo}>
-                        <Image
-                           width={200}
-                           height={200}
-                           alt={'проэкспо'}
-                           src={'/images/proexpologo.jpg'}
-                        />
-                    </div>
                     <div className={style.footerContainerHeaderSocial}>
                         <Link
                             target="_blank"
@@ -94,7 +86,15 @@ const Footer = () => {
 
                 <div className={style.footerContainerFooter}>
                     <p>© 2023 Здоровье-EXPO 15–17 июня 2023</p>
-                    <p>Выставочная компания ООО «ЮРБРУС» 2007-2023</p>
+                    <div className={style.footerContainerFooterSecLogo}>
+                        <Image
+                            width={200}
+                            height={200}
+                            alt={'проэкспо'}
+                            src={'/images/proexpologo.jpg'}
+                        />
+                    </div>
+                    <p>Выставочная компания ООО «ПроЭкспо» 2007-2023</p>
                 </div>
             </div>
         </footer>

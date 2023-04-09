@@ -28,21 +28,12 @@
           gap: calcWidth1920(25)
           color: white
           display: flex
-          font-size: calcWidth1920(16)
+          font-size: calcWidth1920(20)
           li
             border-bottom: 1px solid #093719
             &:hover
               color: #FCF7CE
               border-color: #FCF7CE
-      &SecLogo
-        display: flex
-        justify-content: center
-        align-items: center
-        width: calcWidth1920(200)
-        height: calcWidth1920(200)
-        img
-          width: 100%
-          height: auto
       &Social
         display: flex
         flex-direction: column
@@ -69,5 +60,15 @@
     &Footer
       font-size: calcWidth1920(16)
       display: flex
+      align-items: center
       justify-content: space-evenly
       color: rgba(255, 255, 255, 0.8)
+      &SecLogo
+        display: flex
+        justify-content: center
+        align-items: center
+        width: calcWidth1920(120)
+        height: calcWidth1920(200)
+        img
+          width: 100%
+          height: auto
