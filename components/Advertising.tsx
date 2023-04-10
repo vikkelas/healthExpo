@@ -6,7 +6,7 @@ import {changeModal} from "@/store/reducer/modalSlice";
 import {useDispatch} from "react-redux";
 
 const Advertising = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     return (
         <section className={style.advertising}>
             <div className={style.advertisingBackground}>
