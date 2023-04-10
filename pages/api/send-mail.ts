@@ -1,15 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import NextCors from "nextjs-cors";
 const nodemailer = require('nodemailer');
 
 interface ResponseData {
     message: string
     ok: boolean
 }
-export default function handler(
+export default async function handler(
     req:  NextApiRequest,
     res: NextApiResponse<ResponseData | {error: string}>
 ) {
 
+    await NextCors(req, res, {
+        // Options
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        origin: '*',
+        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    });
     const objMessage = JSON.parse(req.body)
     const message = {
         from: 'ZdorovieEXPO <mail@zdorovie-expo.ru>',
@@ -33,6 +40,7 @@ export default function handler(
     const transporter = nodemailer.createTransport({
         host: "smtp.timeweb.ru",
         port: 25,
+
         auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASSWORD,
