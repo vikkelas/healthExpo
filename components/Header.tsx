@@ -92,6 +92,14 @@ const Header = () => {
                         </motion.li>
                     </ul>
                 </nav>
+                <Link href={'/'} className={style.headerContainerBlackLogo}>
+                    <Image
+                        width={1200}
+                        height={1200}
+                        src={'/images/logoBlackPro.png'}
+                        alt={'logo23'}
+                    />
+                </Link>
                 <div className={style.headerContainerIcons}>
                     <a
                         className={style.headerContainerIconsItem}
