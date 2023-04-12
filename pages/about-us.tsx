@@ -126,7 +126,6 @@ const AboutUs:NextPage<Props> = (props) => {
                     </div>
                 </div>
                 <GallerySwiper data={props.gallery}/>
-                <VideoSwiper/>
             </section>
 
         </main>
