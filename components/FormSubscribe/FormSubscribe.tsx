@@ -28,7 +28,7 @@ const FormSubscribe = () => {
     const sendForm = async (event: React.MouseEvent<HTMLButtonElement>)=>{
         event.preventDefault()
         try {
-            const response = await fetch('http://localhost:3000/api/send-mail', {
+            const response = await fetch('/api/send-mail', {
                 method: "POST",
                 body: JSON.stringify(formState)
             })

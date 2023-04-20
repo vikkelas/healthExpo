@@ -40,7 +40,6 @@ export default async function handler(
     const transporter = nodemailer.createTransport({
         host: "smtp.timeweb.ru",
         port: 25,
-
         auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASSWORD,
