@@ -3,15 +3,10 @@ import Image from "next/image";
 import {v4 as uuidv4} from "uuid";
 import data from "@/data/data";
 import MembersAdditionalServices from "@/components/MembersAdditionalServices/MembersAdditionalServices";
-import {motion} from "framer-motion";
-import {useDispatch} from "react-redux";
-import {changeModal} from "@/store/reducer/modalSlice";
 import Speackers from "@/components/Speakers/Speackers";
 import SaleHealth from "@/components/SaleHealth/SaleHealth";
 
 const Visitors = () => {
-
-    const dispatch = useDispatch()
     const {aboutExpo} = data
     return (
         <main className={style.visitors}>

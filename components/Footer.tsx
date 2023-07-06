@@ -46,7 +46,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'/contacts'}>
+                                <Link href={'/partners'}>
                                     Наши партнеры
                                 </Link>
                             </li>

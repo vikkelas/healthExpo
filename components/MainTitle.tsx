@@ -23,7 +23,7 @@ const MainTitle = () => {
                                 alt={'logo'}
                             />
                         </div>
-                        15-17 июня 2023</h2>
+                        28-30 сентября 2023</h2>
                     <h1><span>Международная специализированная выставка-продажа</span>Здоровье EXPO</h1>
                     <span className={style.mainTitleMainInfoDecor}/>
                     <div className={style.mainTitleMainInfoLocation}>

@@ -8,20 +8,21 @@ const Contacts = () => {
         <section className={styles.contacts}>
             <HowToGetTo title={'Контакты'}/>
             <div className={styles.contactsSchema}>
-                <h2>Схема Экспоцентра</h2>
+                <h2>Схема проезда</h2>
                 <div className={styles.contactsSchemaItem}>
                     <Image
                         width={1200}
                         height={1200}
-                        src={'/images/schema1.png'}
+                        src={'/images/shema-danil5.png'}
                         alt={'схема'}
                     />
                 </div>
+                <span>Схема зала</span>
                 <div className={styles.contactsSchemaItem}>
                     <Image
                         width={1200}
                         height={1200}
-                        src={'/images/schema2.png'}
+                        src={'/images/schema_danil332.webp'}
                         alt={'схема'}
                     />
                 </div>

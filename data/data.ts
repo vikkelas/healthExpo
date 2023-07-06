@@ -98,7 +98,7 @@ const data:DataFile = {
     },
     {
       id: 9,
-      title: 'Изделия из натуральных материалов',
+      title: 'Подбор комфортного матраса, для восстановления вашего здоровья.',
       text: 'Изделия из природных материалов. Одежда из шерсти, льна, шёлка, хлопка, кожи.',
       imgUrl: 'thematicimg9-min.webp',
     }
@@ -197,8 +197,8 @@ const data:DataFile = {
       iconName: 'free-icon-healthy-food-2756708.png'
     },
     {
-      title: 'Изделия и одежда из натуральных материалов.',
-      iconName: 'free-icon-clothes-hanger-2357063.png'
+      title: 'Подбор комфортного матраса, для восстановления вашего здоровья.',
+      iconName: 'free-icon-air-mattress-2357059.png'
     },
     {
       title: 'Товары для здоровья детей.',

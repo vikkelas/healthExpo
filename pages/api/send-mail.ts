@@ -20,7 +20,7 @@ export default async function handler(
     const objMessage = JSON.parse(req.body)
     const message = {
         from: 'ZdorovieEXPO <mail@zdorovie-expo.ru>',
-        to: 'mail@zdorovie-expo.ru',
+        to: 'zdorovie-expo@mail.ru',
         subject: 'Заявка с сайта',
         html: `
         <body>

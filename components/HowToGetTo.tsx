@@ -17,23 +17,23 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                             ref&&ref.behaviors.disable('scrollZoom')
                         }}
                         state={{
-                            center: [55.751974, 37.545303],
-                            zoom: 15,
+                            center: [55.710426, 37.632412],
+                            zoom: 17,
                             controls:[]
                         }}>
                         <Placemark
-                            geometry={[55.751974, 37.545303]}
+                            geometry={[55.710426, 37.632412]}
                         />
                     </Map>
                 </div>
                 <div className={style.addressMainInfo}>
-                    <h3>15-17 июня, 10.00-19.00</h3>
+                    <h3>28-30 сентября</h3>
                     <div className={style.addressMainInfoLinks}>
                         <a
                             className={style.addressMainInfoLinksLink}
                             target={'_blank'}
                             rel="noreferrer"
-                            href={'https://yandex.ru/maps/-/CCU0qAUuKA'}
+                            href={'https://yandex.ru/maps/-/CHa1Mzb'}
                         >
                             <div className={style.addressMainInfoLinksLinkIcon}>
                                 <Image
@@ -43,7 +43,7 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                                     height={35}
                                 />
                             </div>
-                            <span>Адрес: 123100, Москва, Краснопресненская наб., 14</span>
+                            <span>Адрес: Дубининская ул., 71, стр. 5, Москва</span>
                         </a>
                         <a
                             className={style.addressMainInfoLinksLink}
@@ -52,7 +52,7 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                             <div className={style.addressMainInfoLinksLinkIcon}>
                                 <Image
                                     src={'/images/phone-6012.png'}
-                                    alt={'Выставка на ВДНХ'}
+                                    alt={'Выставка'}
                                     width={35}
                                     height={35}
                                 />
@@ -66,7 +66,7 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                             <div className={style.addressMainInfoLinksLinkIcon}>
                                 <Image
                                     src={'/images/phone-6012.png'}
-                                    alt={'Выставка на ВДНХ'}
+                                    alt={'Выставка'}
                                     width={35}
                                     height={35}
                                 />
@@ -77,17 +77,17 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                             className={style.addressMainInfoLinksLink}
                             target={'_blank'}
                             rel="noreferrer"
-                            href={'mailto:mail@zdorovie-expo.ru'}
+                            href={'mailto:mzdorovie-expo@mail.ru'}
                         >
                             <div className={style.addressMainInfoLinksLinkIcon}>
                                 <Image
                                     src={'/images/mail-5712.svg'}
-                                    alt={'Выставка на ВДНХ'}
+                                    alt={'Выставка'}
                                     width={35}
                                     height={35}
                                 />
                             </div>
-                            <span>mail@zdorovie-expo.ru</span>
+                            <span>zdorovie-expo@mail.ru</span>
                         </a>
                     </div>
                 </div>

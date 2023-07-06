@@ -17,39 +17,26 @@ const PavilionGallery = () => {
             >
                 <SwiperSlide className={style.containerSwiperSlider}>
                     <Image
-                        src={'/images/carousel/4.jpg'}
+                        src={'/images/carousel/pavilion1.webp'}
                         alt={'Павильон ВДНХ'}
                         width={400}
                         height={300}/>
                 </SwiperSlide>
                 <SwiperSlide className={style.containerSwiperSlider}>
                     <Image
-                        src={'/images/carousel/5.jpg'}
+                        src={'/images/carousel/pavilion2.webp'}
                         alt={'Павильон ВДНХ'}
                         width={400}
                         height={300}/>
                 </SwiperSlide>
                 <SwiperSlide className={style.containerSwiperSlider}>
                     <Image
-                        src={'/images/carousel/6.jpg'}
+                        src={'/images/carousel/pavilion3.webp'}
                         alt={'Павильон ВДНХ'}
                         width={400}
                         height={300}/>
                 </SwiperSlide>
-                <SwiperSlide className={style.containerSwiperSlider}>
-                    <Image
-                        src={'/images/carousel/7.jpg'}
-                        alt={'Павильон ВДНХ'}
-                        width={400}
-                        height={300}/>
-                </SwiperSlide>
-                <SwiperSlide className={style.containerSwiperSlider}>
-                    <Image
-                        src={'/images/carousel/8.jpg'}
-                        alt={'Павильон ВДНХ'}
-                        width={400}
-                        height={300}/>
-                </SwiperSlide>
+
             </Swiper>
         </div>
     );
