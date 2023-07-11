@@ -1,7 +1,7 @@
 import React from 'react';
-import {Map, Placemark} from '@pbe/react-yandex-maps'
 import style from '../styles/HowToGetTo.module.sass';
 import Image from "next/image";
+import styles from "@/styles/contacts.module.sass";
 const HowToGetTo:React.FC<{title: string}> = ({title}) => {
     return (
         <section className={style.address}>
@@ -11,20 +11,28 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
             </div>
             <div className={style.addressMain}>
                 <div className={style.addressMainMap}>
-                    <Map
-                        className={style.addressMainMapYmap}
-                        instanceRef={ref=>{
-                            ref&&ref.behaviors.disable('scrollZoom')
-                        }}
-                        state={{
-                            center: [55.710426, 37.632412],
-                            zoom: 17,
-                            controls:[]
-                        }}>
-                        <Placemark
-                            geometry={[55.710426, 37.632412]}
+                    <div className={styles.contactsSchemaItem}>
+                        <Image
+                            width={1200}
+                            height={1200}
+                            src={'/images/shema-danil5.png'}
+                            alt={'схема'}
                         />
-                    </Map>
+                    </div>
+                    {/*<Map*/}
+                    {/*    className={style.addressMainMapYmap}*/}
+                    {/*    instanceRef={ref=>{*/}
+                    {/*        ref&&ref.behaviors.disable('scrollZoom')*/}
+                    {/*    }}*/}
+                    {/*    state={{*/}
+                    {/*        center: [55.710426, 37.632412],*/}
+                    {/*        zoom: 17,*/}
+                    {/*        controls:[]*/}
+                    {/*    }}>*/}
+                    {/*    <Placemark*/}
+                    {/*        geometry={[55.710426, 37.632412]}*/}
+                    {/*    />*/}
+                    {/*</Map>*/}
                 </div>
                 <div className={style.addressMainInfo}>
                     <h3>28-30 сентября</h3>

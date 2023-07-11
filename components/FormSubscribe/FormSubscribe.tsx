@@ -50,7 +50,7 @@ const FormSubscribe = () => {
     return (
         <>
             {!response&&<div className={styles.formInfo}>
-                <h2>Принять участие</h2>
+                <h2>Приглашаем посетить</h2>
                 <p>Оставьте свои данные и мы свяжемся с вами в ближайшее время!</p>
                 <form className={styles.formInfoForm}>
                     <label>

@@ -12,11 +12,12 @@ const FormSubscribe = () => {
     const [formState, setFormState] = useState({
         company_name: '',
         kind_of_activity: '',
-        place: 0,
+        place: '',
         contact_name: '',
         tel: '',
         email: '',
-        social: ''
+        social: '',
+        telephone: ''
     })
     const changeForm = (e: React.ChangeEvent<HTMLInputElement>)=>{
         if(e.target.name==='tel'){
@@ -40,11 +41,12 @@ const FormSubscribe = () => {
                 setFormState({
                     company_name: '',
                     kind_of_activity: '',
-                    place: 0,
+                    place: '',
                     contact_name: '',
                     tel: '',
                     email: '',
-                    social: ''
+                    social: '',
+                    telephone: ''
                 })
                 setResponseBody(data)
                 setResponse(true)
@@ -86,7 +88,7 @@ const FormSubscribe = () => {
                         <input
                             required
                             name={'place'}
-                            type="number"
+                            type="text"
                             onChange={changeForm}
                             value={formState.place}
                         />
@@ -99,6 +101,16 @@ const FormSubscribe = () => {
                             type="text"
                             onChange={changeForm}
                             value={formState.contact_name}
+                        />
+                    </label>
+                    <label>
+                        <span>Телефон для связи</span>
+                        <input
+                            required
+                            name={'tel'}
+                            type="text"
+                            onChange={changeForm}
+                            value={formState.telephone}
                         />
                     </label>
                     <label>

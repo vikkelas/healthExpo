@@ -100,7 +100,7 @@ const data:DataFile = {
       id: 9,
       title: 'Выбор комфортного матраса, для восстановления вашего здоровья.',
       text: 'Узнаете о производителях матрасов, описание моделей, о наполнителях и получите советы по выбору матраса',
-      imgUrl: 'thematicimg9-min.webp',
+      imgUrl: 'thematicimg9-min.jpeg',
     }
   ],
   pavilionInfo: [

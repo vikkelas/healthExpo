@@ -36,7 +36,7 @@ const Speakers = () => {
                             />
                         </div>
                         <motion.button
-                            onClick={()=>dispatch(openModal(ModalType.DEFAULT))}
+                            onClick={()=>dispatch(openModal(ModalType.PARTICIPANTS))}
                             initial={{scale: 1}}
                             whileHover={{scale: 1.04}}
                             whileTap={{scale: 0.9}}

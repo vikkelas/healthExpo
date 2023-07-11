@@ -33,6 +33,8 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
             <h2>Принять участие</h2>
             <div className={style.formWindowBox}>
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={'https://wa.me/79260501033'}
                     className={style.formWindowBoxSocial}>
                     <div className={style.formWindowBoxSocialIcon}>
@@ -46,6 +48,8 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
                     <span>WhatsApp</span>
                 </a>
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={'https://vk.com/expozdorovie2023'}
                     className={style.formWindowBoxSocial}>
                     <div className={style.formWindowBoxSocialIcon}>

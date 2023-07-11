@@ -29,7 +29,7 @@ const Advertising = () => {
                         <li className={style.advertisingContentInfoListItem}>В группах, сообществах</li>
                         <li className={style.advertisingContentInfoListItem}>Социальные сети</li>
                         <li className={style.advertisingContentInfoListItem}>Смс Маркетинг</li>
-                        <li className={style.advertisingContentInfoListItem}>Звуковая реклама компании во время выставки.</li>
+                        <li className={style.advertisingContentInfoListItem}>Звуковая реклама во время выставки.</li>
                     </ul>
                     <motion.button
                         onClick={()=>dispatch(openModal(ModalType.PARTICIPANTS))}

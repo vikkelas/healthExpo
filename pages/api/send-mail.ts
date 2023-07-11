@@ -55,7 +55,7 @@ export default async function handler(
 
     const message = {
         from: 'ZdorovieEXPO <mail@zdorovie-expo.ru>',
-        to: 'zdorovie-expo@mail.ru',
+        to: 'bass89@mail.ru',
         subject: 'Заявка с сайта',
         text: "Ваша заявка с сайта",
         html: type===ModalType.DEFAULT?messageDef:messagePart,

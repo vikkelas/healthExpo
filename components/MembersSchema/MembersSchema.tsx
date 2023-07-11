@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import styles from './MembersSchema.module.sass';
 import Image from "next/image";
 import {v4 as uuidv4} from 'uuid';
-import Modal from "@/components/Modal/Modal";
 const MembersSchema = () => {
     const [activePhoto, setActivePhoto] = useState('');
     const [modalActive, setModalActive] = useState(false)
@@ -36,12 +35,21 @@ const MembersSchema = () => {
                         )
                     })}
                 </div>
-                <div className={styles.schemaContainerShema}>
-                    <Image
-                        fill
-                        src={'/images/shema-danil5.png'}
-                        alt={'схема зала'}
-                    />
+                <div className={styles.schemaContainerSchemas}>
+                    <div className={styles.schemaContainerSchemasShema}>
+                        <Image
+                            fill
+                            src={'/images/shema-danil5.png'}
+                            alt={'схема зала'}
+                        />
+                    </div>
+                    <div className={styles.schemaContainerSchemasShema}>
+                        <Image
+                            fill
+                            src={'/images/schema_danil332.webp'}
+                            alt={'схема'}
+                        />
+                    </div>
                 </div>
             </div>
             <div className={modalActive?styles.modalActive:styles.modal}>
