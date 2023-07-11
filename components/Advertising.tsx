@@ -20,13 +20,16 @@ const Advertising = () => {
             <div className={style.advertisingContent}>
                 <h2>Размещение рекламы</h2>
                 <div className={style.advertisingContentInfo}>
-                    <ul>
-                        <li>Яндекс директ</li>
-                        <li>Таргетированная реклама</li>
-                        <li>Наружная реклама </li>
-                        <li>Флаеры</li>
-                        <li>Тв реклама</li>
-                        <li>В группах, сообществах</li>
+                    <ul className={style.advertisingContentInfoList}>
+                        <li className={style.advertisingContentInfoListItem}>Яндекс директ</li>
+                        <li className={style.advertisingContentInfoListItem}>Таргетированная реклама</li>
+                        <li className={style.advertisingContentInfoListItem}>Наружная реклама </li>
+                        <li className={style.advertisingContentInfoListItem}>Флаеры</li>
+                        <li className={style.advertisingContentInfoListItem}>Тв реклама</li>
+                        <li className={style.advertisingContentInfoListItem}>В группах, сообществах</li>
+                        <li className={style.advertisingContentInfoListItem}>Социальные сети</li>
+                        <li className={style.advertisingContentInfoListItem}>Смс Маркетинг</li>
+                        <li className={style.advertisingContentInfoListItem}>Звуковая реклама компании во время выставки.</li>
                     </ul>
                     <motion.button
                         onClick={()=>dispatch(changeModal(true))}

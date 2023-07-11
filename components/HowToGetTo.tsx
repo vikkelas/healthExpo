@@ -43,7 +43,7 @@ const HowToGetTo:React.FC<{title: string}> = ({title}) => {
                                     height={35}
                                 />
                             </div>
-                            <span>Адрес: Дубининская ул., 71, стр. 5, Москва</span>
+                            <span>Адрес: Дубининская ул., 71, Москва</span>
                         </a>
                         <a
                             className={style.addressMainInfoLinksLink}

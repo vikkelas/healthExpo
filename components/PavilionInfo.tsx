@@ -21,7 +21,7 @@ const PavilionInfo = () => {
                     </div>
                     <div className={style.pavilionInfoHeaderInfoContent}>
                         <p className={style.pavilionInfoHeaderInfoContentFirst}>м. Тульская</p>
-                        <p className={style.pavilionInfoHeaderInfoContentAny}>Общая площадь: <span>1900 кв. м </span></p>
+                        <p className={style.pavilionInfoHeaderInfoContentAny}>Общая площадь: <span>1900 кв</span></p>
                     </div>
                 </motion.div>
                 <div className={style.pavilionInfoHeaderImage}>

@@ -52,6 +52,7 @@
           color: #4F3329
           font-size: calcWidth1920(34)
           line-height: calcWidth1920(50)
+          font-weight: 600
       &Decor
         display: block
         width: calcWidth1920(882)
@@ -60,19 +61,25 @@
         margin-top: calcWidth1920(45)
       &Location
         display: flex
-        align-items: center
+        flex-direction: column
+        align-items: flex-end
         gap: calcWidth1920(22)
         margin-top: calcWidth1920(30)
-        color: #4F3329
+        color: rgba(79, 51, 41, 0.9)
         font-family: Noto,sans-serif
         font-size: calcWidth1920(55)
         line-height: calcWidth1920(75)
-        span
-          display: block
-          width: calcWidth1920(22)
-          height: calcWidth1920(22)
-          border-radius: calcWidth1920(22)
-          background-color: #4F3329
+        p
+          font-weight: 600
+          font-size: 50px
+          text-align: right
+          line-height: normal
+        //span
+        //  display: block
+        //  width: calcWidth1920(22)
+        //  height: calcWidth1920(22)
+        //  border-radius: calcWidth1920(22)
+        //  background-color: #4F3329
   &Text
     position: relative
     z-index: 10

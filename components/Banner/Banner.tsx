@@ -46,7 +46,7 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
                     <span>WhatsApp</span>
                 </a>
                 <a
-                    href={'https://vk.com/festivalyarmarka'}
+                    href={'https://vk.com/expozdorovie2023'}
                     className={style.formWindowBoxSocial}>
                     <div className={style.formWindowBoxSocialIcon}>
                         <Image

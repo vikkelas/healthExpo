@@ -36,6 +36,13 @@ const MembersSchema = () => {
                         )
                     })}
                 </div>
+                <div className={styles.schemaContainerShema}>
+                    <Image
+                        fill
+                        src={'/images/shema-danil5.png'}
+                        alt={'схема зала'}
+                    />
+                </div>
             </div>
             <div className={modalActive?styles.modalActive:styles.modal}>
                 <div className={modalActive?styles.contentActive:styles.content}>

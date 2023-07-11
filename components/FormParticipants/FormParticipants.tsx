@@ -13,6 +13,7 @@ const FormSubscribe = () => {
         name: '',
         telephone: '',
         email: '',
+        role: '1'
     })
     const changeForm = (e: React.ChangeEvent<HTMLInputElement>)=>{
         if(e.target.name==='tel'){
@@ -37,6 +38,7 @@ const FormSubscribe = () => {
                     name: '',
                     telephone: '',
                     email: '',
+                    role: '1'
                 })
                 setResponseBody(data)
                 setResponse(true)
@@ -83,6 +85,29 @@ const FormSubscribe = () => {
                             value={formState.email}
                         />
                     </label>
+                    <div className={styles.formInfoFormRadio}>
+                        <span>Укажите ваш статус</span>
+                        <label>
+                            <span>Участник</span>
+                            <input
+                                name="role"
+                                type="radio"
+                                value={'1'}
+                                checked={formState.role==='1'}
+                                onChange={changeForm}
+                            />
+                        </label>
+                        <label>
+                            <span>Посетитель</span>
+                            <input
+                                name="role"
+                                type="radio"
+                                value={'2'}
+                                checked={formState.role==='2'}
+                                onChange={changeForm}
+                            />
+                        </label>
+                    </div>
                     <button
                         onClick={sendForm}
                     >

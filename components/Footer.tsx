@@ -56,7 +56,7 @@ const Footer = () => {
                         <Link
                             target="_blank"
                             className={style.footerContainerHeaderSocialLink}
-                            href={'https://vk.com/festivalyarmarka'}>
+                            href={'https://vk.com/expozdorovie2023'}>
                             <div className={style.footerContainerHeaderSocialLinkIcon}>
                                 <Image
                                     src={'/images/vk.png'}

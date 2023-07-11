@@ -17,15 +17,15 @@ const Contacts = () => {
                         alt={'схема'}
                     />
                 </div>
-                <span>Схема зала</span>
-                <div className={styles.contactsSchemaItem}>
-                    <Image
-                        width={1200}
-                        height={1200}
-                        src={'/images/schema_danil332.webp'}
-                        alt={'схема'}
-                    />
-                </div>
+                {/*<span>Схема зала</span>*/}
+                {/*<div className={styles.contactsSchemaItem}>*/}
+                {/*    <Image*/}
+                {/*        width={1200}*/}
+                {/*        height={1200}*/}
+                {/*        src={'/images/schema_danil332.webp'}*/}
+                {/*        alt={'схема'}*/}
+                {/*    />*/}
+                {/*</div>*/}
             </div>
         </section>
     );

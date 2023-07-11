@@ -27,9 +27,8 @@ const MainTitle = () => {
                     <h1><span>Международная специализированная выставка-продажа</span>Здоровье EXPO</h1>
                     <span className={style.mainTitleMainInfoDecor}/>
                     <div className={style.mainTitleMainInfoLocation}>
-                        <p>Москва</p>
-                        <span/>
-                        <p>Экспоцентр</p>
+                        <p>Выставочный зал Даниловский EVENT HALL пространство</p>
+                        <p>ул. Дубининская 71</p>
                     </div>
                 </div>
             </div>

@@ -44,16 +44,17 @@
       display: flex
       align-items: center
       justify-content: space-evenly
-      ul
-        white-space: nowrap
+      &List
+        display: flex
+        flex-direction: column
         background-color: rgba(122, 122, 122, 0.92)
-        padding: calcWidth1920(30)
+        padding: 30px
         border-radius: calcWidth1920(30)
         color: #f8f2b7
-        max-width: calcWidth1920(700)
+        width: calcWidth1920(700)
         line-height: calcWidth1920(60)
-        font-size: calcWidth1920(40)
-        li
+        font-size: calcWidth1920(35)
+        &Item
           list-style: inside
       button
         cursor: pointer
