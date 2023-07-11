@@ -4,7 +4,7 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import {NextPage} from "next";
 import {useDispatch} from "react-redux";
-import {changeModal} from "@/store/reducer/modalSlice";
+import {ModalType, openModal} from "@/store/reducer/modalSlice";
 
 interface PropsBanner {
     setBanner:  React.Dispatch<React.SetStateAction<boolean>>;
@@ -60,7 +60,7 @@ const Banner:NextPage<PropsBanner> = ({setBanner}) => {
                 </a>
             </div>
             <button
-                onClick={()=>dispatch(changeModal(true))}
+                onClick={()=>dispatch(openModal(ModalType.PARTICIPANTS))}
             >Регистрация</button>
         </motion.article>
     );

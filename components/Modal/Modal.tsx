@@ -2,7 +2,8 @@ import style from './Modal.module.sass'
 import {NextPage} from "next";
 import {ReactNode} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {changeModal, ModalState} from "@/store/reducer/modalSlice";
+import {closeModal} from "@/store/reducer/modalSlice";
+import {AppState} from "@/store/reducer/rootReducer";
 
 interface ModalProps {
 
@@ -11,12 +12,11 @@ interface ModalProps {
 
 const Modal:NextPage<ModalProps>= ({ children}) => {
     const dispatch = useDispatch()
-    const selectIsOn = (state: {modal: ModalState}) => state.modal
-    const {statusModal} = useSelector(selectIsOn)
+    const {statusModal} = useSelector((state:AppState) => state.modal)
     return (
         <div
             onClick={()=>{
-                dispatch(changeModal(false))
+                dispatch(closeModal())
             }}
             className={statusModal?style.modalActive:style.modal}>
             <div

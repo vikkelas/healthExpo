@@ -1,3 +1,4 @@
+
 import {createSlice} from "@reduxjs/toolkit";
 
 export interface ModalState {
@@ -19,7 +20,7 @@ const modalSlice = createSlice({
     name: 'modal',
     initialState: modalState,
     reducers: {
-        closeModal: (state, action)=>{
+        closeModal: (state)=>{
             state.statusModal=false
             state.typeModal = null
         },

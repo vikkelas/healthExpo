@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
 import styles from './FormSubscribe.module.sass';
 import formattedPhoneNumber from "@/lib/maskFone";
-import {useDispatch, useSelector} from "react-redux";
-import {changeModal, ModalState} from "@/store/reducer/modalSlice";
+import {useDispatch, } from "react-redux";
+import {closeModal, ModalType} from "@/store/reducer/modalSlice";
 
 const FormSubscribe = () => {
     const [response, setResponse] =useState(false)
@@ -27,7 +27,7 @@ const FormSubscribe = () => {
     const sendForm = async (event: React.MouseEvent<HTMLButtonElement>)=>{
         event.preventDefault()
         try {
-            const response = await fetch('/api/send-mail', {
+            const response = await fetch(`/api/send-mail?type=${ModalType.PARTICIPANTS}`, {
                 method: "POST",
                 body: JSON.stringify(formState)
             })
@@ -86,7 +86,7 @@ const FormSubscribe = () => {
                     <button
                         onClick={sendForm}
                     >
-                        Учавствовать
+                        Получить приглашение
                     </button>
                 </form>
             </div>}
@@ -96,7 +96,7 @@ const FormSubscribe = () => {
                     <button
                         onClick={(event)=>{
                             event.preventDefault()
-                            dispatch(changeModal(false))
+                            dispatch(closeModal())
                             setResponse(false)
                         }}
                     >ок</button>

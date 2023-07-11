@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
-import styles from './FormSubscribe.module.sass';
+import styles from './FormParticipants.module.sass';
 import formattedPhoneNumber from "@/lib/maskFone";
-import {useDispatch, useSelector} from "react-redux";
-import {changeModal, ModalState} from "@/store/reducer/modalSlice";
+import {useDispatch} from "react-redux";
+import {closeModal, ModalType} from "@/store/reducer/modalSlice";
 
 const FormSubscribe = () => {
     const [response, setResponse] =useState(false)
@@ -10,10 +10,13 @@ const FormSubscribe = () => {
         any | null>(null)
 
     const [formState, setFormState] = useState({
-        name: '',
-        telephone: '',
+        company_name: '',
+        kind_of_activity: '',
+        place: 0,
+        contact_name: '',
+        tel: '',
         email: '',
-        role: '1'
+        social: ''
     })
     const changeForm = (e: React.ChangeEvent<HTMLInputElement>)=>{
         if(e.target.name==='tel'){
@@ -28,17 +31,20 @@ const FormSubscribe = () => {
     const sendForm = async (event: React.MouseEvent<HTMLButtonElement>)=>{
         event.preventDefault()
         try {
-            const response = await fetch('/api/send-mail', {
+            const response = await fetch(`/api/send-mail?type=${ModalType.PARTICIPANTS}`, {
                 method: "POST",
                 body: JSON.stringify(formState)
             })
             if(response.ok){
                 const data = await response.json()
                 setFormState({
-                    name: '',
-                    telephone: '',
+                    company_name: '',
+                    kind_of_activity: '',
+                    place: 0,
+                    contact_name: '',
+                    tel: '',
                     email: '',
-                    role: '1'
+                    social: ''
                 })
                 setResponseBody(data)
                 setResponse(true)
@@ -52,27 +58,47 @@ const FormSubscribe = () => {
     return (
         <>
             {!response&&<div className={styles.formInfo}>
-                <h2>Принять участие</h2>
+                <h2>Участникам</h2>
                 <p>Оставьте свои данные и мы свяжемся с вами в ближайшее время!</p>
                 <form className={styles.formInfoForm}>
                     <label>
-                        <span>Имя</span>
+                        <span>Назавние компании</span>
                         <input
                             required
-                            name={'name'}
+                            name={'company_name'}
                             type="text"
                             onChange={changeForm}
-                            value={formState.name}
+                            value={formState.company_name}
                         />
                     </label>
                     <label>
-                        <span>Телефон для связи</span>
+                        <span>Вид деятельности</span>
                         <input
                             required
-                            name={'tel'}
+                            name={'kind_of_activity'}
                             type="text"
                             onChange={changeForm}
-                            value={formState.telephone}
+                            value={formState.kind_of_activity}
+                        />
+                    </label>
+                    <label>
+                        <span>Требуемая площадь</span>
+                        <input
+                            required
+                            name={'place'}
+                            type="number"
+                            onChange={changeForm}
+                            value={formState.place}
+                        />
+                    </label>
+                    <label>
+                        <span>Контактное лицо</span>
+                        <input
+                            required
+                            name={'contact_name'}
+                            type="text"
+                            onChange={changeForm}
+                            value={formState.contact_name}
                         />
                     </label>
                     <label>
@@ -85,29 +111,16 @@ const FormSubscribe = () => {
                             value={formState.email}
                         />
                     </label>
-                    <div className={styles.formInfoFormRadio}>
-                        <span>Укажите ваш статус</span>
-                        <label>
-                            <span>Участник</span>
-                            <input
-                                name="role"
-                                type="radio"
-                                value={'1'}
-                                checked={formState.role==='1'}
-                                onChange={changeForm}
-                            />
-                        </label>
-                        <label>
-                            <span>Посетитель</span>
-                            <input
-                                name="role"
-                                type="radio"
-                                value={'2'}
-                                checked={formState.role==='2'}
-                                onChange={changeForm}
-                            />
-                        </label>
-                    </div>
+                    <label>
+                        <span>Сайт/Группа в соцсетях*</span>
+                        <input
+                            required
+                            name={'social'}
+                            type="text"
+                            onChange={changeForm}
+                            value={formState.social}
+                        />
+                    </label>
                     <button
                         onClick={sendForm}
                     >
@@ -121,7 +134,7 @@ const FormSubscribe = () => {
                     <button
                         onClick={(event)=>{
                             event.preventDefault()
-                            dispatch(changeModal(false))
+                            dispatch(closeModal())
                             setResponse(false)
                         }}
                     >ок</button>

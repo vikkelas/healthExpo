@@ -2,7 +2,7 @@ import style from  '../styles/Advertising.module.sass';
 import Image from "next/image";
 import {motion} from "framer-motion";
 import React from "react";
-import {changeModal} from "@/store/reducer/modalSlice";
+import {ModalType, openModal} from "@/store/reducer/modalSlice";
 import {useDispatch} from "react-redux";
 
 const Advertising = () => {
@@ -32,7 +32,7 @@ const Advertising = () => {
                         <li className={style.advertisingContentInfoListItem}>Звуковая реклама компании во время выставки.</li>
                     </ul>
                     <motion.button
-                        onClick={()=>dispatch(changeModal(true))}
+                        onClick={()=>dispatch(openModal(ModalType.PARTICIPANTS))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}

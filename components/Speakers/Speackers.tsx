@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./Speakers.module.sass";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {changeModal} from "@/store/reducer/modalSlice";
+import {ModalType, openModal} from "@/store/reducer/modalSlice";
 import {useDispatch} from "react-redux";
 
 const Speakers = () => {
@@ -36,7 +36,7 @@ const Speakers = () => {
                             />
                         </div>
                         <motion.button
-                            onClick={()=>dispatch(changeModal(true))}
+                            onClick={()=>dispatch(openModal(ModalType.DEFAULT))}
                             initial={{scale: 1}}
                             whileHover={{scale: 1.04}}
                             whileTap={{scale: 0.9}}

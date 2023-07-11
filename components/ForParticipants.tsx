@@ -3,7 +3,7 @@ import style from '../styles/ForParticipants.module.sass';
 import Image from "next/image";
 import {motion} from 'framer-motion'
 import {useDispatch} from "react-redux";
-import {changeModal} from "@/store/reducer/modalSlice";
+import {ModalType, openModal} from "@/store/reducer/modalSlice";
 
 const ForParticipants = () => {
     const dispatch = useDispatch()
@@ -35,7 +35,7 @@ const ForParticipants = () => {
                         <p>Размещение информации о товарах и услугах участников в соцсетях.</p>
                     </div>
                     <motion.button
-                        onClick={()=>dispatch(changeModal(true))}
+                        onClick={()=>dispatch(openModal(ModalType.PARTICIPANTS))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}
@@ -74,7 +74,7 @@ const ForParticipants = () => {
                         </ul>
                     </div>
                     <motion.button
-                        onClick={()=>dispatch(changeModal(true))}
+                        onClick={()=>dispatch(openModal(ModalType.DEFAULT))}
                         initial={{scale: 1}}
                         whileHover={{scale: 1.04}}
                         whileTap={{scale: 0.9}}

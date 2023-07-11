@@ -4,8 +4,9 @@ import React from "react";
 import Modal from "@/components/Modal/Modal";
 import FormSubscribe from "@/components/FormSubscribe/FormSubscribe";
 import {useSelector} from "react-redux";
-import {ModalState} from "@/store/reducer/modalSlice";
+import {ModalState, ModalType} from "@/store/reducer/modalSlice";
 import {AppState} from "@/store/reducer/rootReducer";
+import FormParticipants from "@/components/FormParticipants/FormParticipants";
 
 interface PropsLayout {
     children:JSX.Element
@@ -18,7 +19,8 @@ const Layout: React.FC<PropsLayout>  = (props) => {
                 {props.children}
             <Footer/>
             <Modal>
-                <FormSubscribe/>
+                {modal.typeModal===ModalType.PARTICIPANTS&&<FormParticipants/>}
+                {modal.typeModal===ModalType.DEFAULT&&<FormSubscribe/>}
             </Modal>
         </div>
     );

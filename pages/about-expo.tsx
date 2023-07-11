@@ -1,15 +1,10 @@
 import style from '../styles/aboutExpo.module.sass'
 import Image from "next/image";
-import {motion} from "framer-motion";
-import {changeModal} from "@/store/reducer/modalSlice";
-import {useDispatch} from "react-redux";
 import Speackers from "@/components/Speakers/Speackers";
-import SaleHealth from "@/components/SaleHealth/SaleHealth";
 import MembersAdditionalServices from "@/components/MembersAdditionalServices/MembersAdditionalServices";
 import data from "@/data/data";
 const AboutExpo = () => {
 
-    const dispatch = useDispatch()
     return (
         <main className={style.main}>
             <section className={style.mainTitle}>
